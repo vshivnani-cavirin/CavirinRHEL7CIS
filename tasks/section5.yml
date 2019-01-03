@@ -3,7 +3,7 @@
       name: crond
       enabled: yes
   when:
-      - rhel7cis_rule_5_1_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.1.1_Ensure_cron_daemon_is_enabled
   tags:
       - level1
       - level2
@@ -17,7 +17,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_5_1_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.1.2_Ensure_permissions_on_etccrontab_are_configured
   tags:
       - level1
       - level2
@@ -32,7 +32,7 @@
       group: root
       mode: 0700
   when:
-      - rhel7cis_rule_5_1_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.1.3_Ensure_permissions_on_etccron.hourly_are_configured
   tags:
       - level1
       - level2
@@ -47,7 +47,7 @@
       group: root
       mode: 0700
   when:
-      - rhel7cis_rule_5_1_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.1.4_Ensure_permissions_on_etccron.daily_are_configured
   tags:
       - level1
       - level2
@@ -62,7 +62,7 @@
       group: root
       mode: 0700
   when:
-      - rhel7cis_rule_5_1_5
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.1.5_Ensure_permissions_on_etccron.weekly_are_configured
   tags:
       - level1
       - level2
@@ -77,7 +77,7 @@
       group: root
       mode: 0700
   when:
-      - rhel7cis_rule_5_1_6
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.1.6_Ensure_permissions_on_etccron.monthly_are_configured
   tags:
       - level1
       - level2
@@ -92,7 +92,7 @@
       group: root
       mode: 0700
   when:
-      - rhel7cis_rule_5_1_7
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.1.7_Ensure_permissions_on_etccron.d_are_configured
   tags:
       - level1
       - level2
@@ -137,7 +137,7 @@
             group: root
             mode: 0600
   when:
-      - rhel7cis_rule_5_1_8
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.1.8_Ensure_atcron_is_restricted_to_authorized_users
   tags:
       - level1
       - level2
@@ -152,7 +152,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_5_2_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.1_Ensure_permissions_on_etcsshsshd_config_are_configured
   tags:
       - level1
       - level2
@@ -166,7 +166,7 @@
       regexp: '^Protocol'
       line: 'Protocol 2'
   when:
-      - rhel7cis_rule_5_2_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.2_Ensure_SSH_Protocol_is_set_to_2
   tags:
       - level1
       - level2
@@ -180,7 +180,7 @@
       regexp: '^LogLevel'
       line: 'LogLevel INFO'
   when:
-      - rhel7cis_rule_5_2_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.3_Ensure_SSH_LogLevel_is_set_to_INFO
   tags:
       - level1
       - level2
@@ -194,7 +194,7 @@
       regexp: '^X11Forwarding'
       line: 'X11Forwarding no'
   when:
-      - rhel7cis_rule_5_2_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.4_Ensure_SSH_X11_forwarding_is_disabled
   tags:
       - level1
       - level2
@@ -208,7 +208,7 @@
       regexp: '^(#)?MaxAuthTries \d'
       line: 'MaxAuthTries 4'
   when:
-      - rhel7cis_rule_5_2_5
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.5_Ensure_SSH_MaxAuthTries_is_set_to_4_or_less
   tags:
       - level1
       - level2
@@ -222,7 +222,7 @@
       regexp: '^IgnoreRhosts'
       line: 'IgnoreRhosts yes'
   when:
-      - rhel7cis_rule_5_2_6
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.6_Ensure_SSH_IgnoreRhosts_is_enabled
   tags:
       - level1
       - level2
@@ -236,7 +236,7 @@
       regexp: '^HostbasedAuthentication'
       line: 'HostbasedAuthentication no'
   when:
-      - rhel7cis_rule_5_2_7
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.7_Ensure_SSH_HostbasedAuthentication_is_disabled
   tags:
       - level1
       - level2
@@ -250,7 +250,7 @@
       regexp: '^PermitRootLogin'
       line: 'PermitRootLogin no'
   when:
-      - rhel7cis_rule_5_2_8
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.8_Ensure_SSH_root_login_is_disabled
   tags:
       - level1
       - level2
@@ -264,7 +264,7 @@
       regexp: '^PermitEmptyPasswords'
       line: 'PermitEmptyPasswords no'
   when:
-      - rhel7cis_rule_5_2_9
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.9_Ensure_SSH_PermitEmptyPasswords_is_disabled
   tags:
       - level1
       - level2
@@ -278,7 +278,7 @@
       regexp: '^PermitUserEnvironment'
       line: 'PermitUserEnvironment no'
   when:
-      - rhel7cis_rule_5_2_10
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.10_Ensure_SSH_PermitUserEnvironment_is_disabled
   tags:
       - level1
       - level2
@@ -292,7 +292,7 @@
       regexp: '^Ciphers'
       line: "Ciphers {{ rhel7cis_sshd['ciphers'] }}"
   when:
-      - rhel7cis_rule_5_2_11
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.11_Ensure_only_approved_MAC_algorithms_are_used
   tags:
       - level1
       - level2
@@ -306,7 +306,7 @@
       regexp: '^MACs'
       line: "MACs {{ rhel7cis_sshd['macs'] }}"
   when:
-      - rhel7cis_rule_5_2_12
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.12_Ensure_SSH_Idle_Timeout_Interval_is_configured
   tags:
       - level1
       - level2
@@ -329,7 +329,7 @@
             regexp: '^ClientAliveCountMax'
             line: "ClientAliveCountMax {{ rhel7cis_sshd['clientalivecountmax'] }}"
   when:
-      - rhel7cis_rule_5_2_13
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.13_Ensure_SSH_LoginGraceTime_is_set_to_one_minute_or_less
   tags:
       - level1
       - level2
@@ -343,7 +343,7 @@
       regexp: '^LoginGraceTime'
       line: "LoginGraceTime {{ rhel7cis_sshd['logingracetime'] }}"
   when:
-      - rhel7cis_rule_5_2_14
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.14_Ensure_SSH_access_is_limited
   tags:
       - level1
       - level2
@@ -396,7 +396,7 @@
         when:
             - "rhel7cis_sshd['denygroups']|default('') != ''"
   when:
-      - rhel7cis_rule_5_2_15
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.2.15_Ensure_SSH_warning_banner_is_configured
   tags:
       - level1
       - level2
@@ -430,7 +430,7 @@
       - { key: 'ocredit', value: '-1' }
       - { key: 'lcredit', value: '-1' }
   when:
-      - rhel7cis_rule_5_3_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.3.1_Ensure_password_creation_requirements_are_configured
   tags:
       - level1
       - level2
@@ -441,7 +441,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_5_3_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.3.2_Ensure_lockout_for_failed_password_attempts_is_configured
   tags:
       - level1
       - level2
@@ -453,7 +453,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_5_3_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.3.3_Ensure_password_reuse_is_limited
   tags:
       - level1
       - level2
@@ -466,7 +466,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_5_3_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.3.4_Ensure_password_hashing_algorithm_is_SHA-512
   tags:
       - level1
       - level2
@@ -480,7 +480,7 @@
       regexp: '^PASS_MAX_DAYS'
       line: "PASS_MAX_DAYS {{ rhel7cis_pass['max_days'] }}"
   when:
-      - rhel7cis_rule_5_4_1_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.4.1.1_Ensure_password_expiration_is_90_days_or_less
   tags:
       - level1
       - level2
@@ -494,7 +494,7 @@
       regexp: '^PASS_MIN_DAYS'
       line: "PASS_MIN_DAYS {{ rhel7cis_pass['min_days'] }}"
   when:
-      - rhel7cis_rule_5_4_1_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.4.1.2_Ensure_minimum_days_between_password_changes_is_7_or_more
   tags:
       - level1
       - level2
@@ -508,7 +508,7 @@
       regexp: '^PASS_WARN_AGE'
       line: "PASS_WARN_AGE {{ rhel7cis_pass['warn_age'] }}"
   when:
-      - rhel7cis_rule_5_4_1_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.4.1.3_Ensure_password_expiration_warning_days_is_7_or_more
   tags:
       - level1
       - level2
@@ -519,7 +519,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_5_4_1_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.4.1.4_Ensure_inactive_password_lock_is_30_days_or_less
   tags:
       - level1
       - level2
@@ -531,7 +531,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_5_4_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.4.2_Ensure_system_accounts_are_non-login
   tags:
       - level1
       - level2
@@ -544,7 +544,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_5_4_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.4.3_Ensure_default_group_for_the_root_account_is_GID_0
   tags:
       - level1
       - level2
@@ -565,7 +565,7 @@
             regexp: '(^\s+umask) 002'
             replace: '\1 027'
   when:
-      - rhel7cis_rule_5_4_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_5.4.4_Ensure_default_user_umask_is_027_or_more_restrictive
   tags:
       - level1
       - level2

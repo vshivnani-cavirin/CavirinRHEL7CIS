@@ -5,20 +5,21 @@
       line: "install cramfs /bin/true"
       create: yes
   when:
-      - rhel7cis_rule_1_1_1_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_1_Ensure_mounting_of_cramfs_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
       - rule_1.1.1.1
       - cramfs
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_1_Ensure_mounting_of_cramfs_filesystems_is_disabled
 
 - name: "SCORED | 1.1.1.1 | PATCH | Remove cramfs module"
   modprobe:
     name: cramfs
     state: absent
   when:
-      - rhel7cis_rule_1_1_1_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.1_Ensure_mounting_of_cramfs_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -33,7 +34,7 @@
       line: "install freevxfs /bin/true"
       create: yes
   when:
-      - rhel7cis_rule_1_1_1_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.2_Ensure_mounting_of_freevxfs_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -46,7 +47,7 @@
     name: freevxfs
     state: absent
   when:
-      - rhel7cis_rule_1_1_1_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.2_Ensure_mounting_of_freevxfs_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -61,7 +62,7 @@
       line: "install jffs2 /bin/true"
       create: yes
   when:
-      - rhel7cis_rule_1_1_1_3
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.3_Ensure_mounting_of_jffs2_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -74,7 +75,7 @@
     name: jffs2
     state: absent
   when:
-      - rhel7cis_rule_1_1_1_3
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.3_Ensure_mounting_of_jffs2_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -89,7 +90,7 @@
       line: "install hfs /bin/true"
       create: yes
   when:
-      - rhel7cis_rule_1_1_1_4
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.4_Ensure_mounting_of_hfs_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -102,7 +103,7 @@
     name: hfs
     state: absent
   when:
-      - rhel7cis_rule_1_1_1_4
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.4_Ensure_mounting_of_hfs_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -117,7 +118,7 @@
       line: "install hfsplus /bin/true"
       create: yes
   when:
-      - rhel7cis_rule_1_1_1_5
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.5_Ensure_mounting_of_hfsplus_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -130,7 +131,7 @@
     name: hfsplus
     state: absent
   when:
-      - rhel7cis_rule_1_1_1_5
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.5_Ensure_mounting_of_hfsplus_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -145,7 +146,7 @@
       line: "install squashfs /bin/true"
       create: yes
   when:
-      - rhel7cis_rule_1_1_1_6
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.6_Ensure_mounting_of_squashfs_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -158,7 +159,7 @@
     name: squashfs
     state: absent
   when:
-      - rhel7cis_rule_1_1_1_6
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.6_Ensure_mounting_of_squashfs_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -173,7 +174,7 @@
       line: "install udf /bin/true"
       create: yes
   when:
-      - rhel7cis_rule_1_1_1_7
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.7_Ensure_mounting_of_udf_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -186,7 +187,7 @@
     name: udf
     state: absent
   when:
-      - rhel7cis_rule_1_1_1_7
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.7_Ensure_mounting_of_udf_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -201,7 +202,7 @@
       line: "install vfat /bin/true"
       create: yes
   when:
-      - rhel7cis_rule_1_1_1_8
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.8_Ensure_mounting_of_FAT_filesystems_is_disabled
   tags:
       - level1
       - scored
@@ -214,7 +215,7 @@
     name: vfat
     state: absent
   when:
-      - rhel7cis_rule_1_1_1_8
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.8_Ensure_mounting_of_FAT_filesystems_is_disabled
   tags:
       - level2
       - scored
@@ -230,7 +231,7 @@
       masked: no
       state: started
   when:
-      - rhel7cis_rule_1_1_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.2_Ensure_separate_partition_exists_for_tmp
   tags:
       - level2
       - scored
@@ -249,9 +250,9 @@
       mode: 0644
   notify: systemd restart tmp.mount
   when:
-      - rhel7cis_rule_1_1_3
-      - rhel7cis_rule_1_1_4
-      - rhel7cis_rule_1_1_5
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.3_Ensure_nodev_option_set_on_tmp_partition
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.4_Ensure_nosuid_option_set_on_tmp_partition
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.5_Ensure_separate_partition_exists_for_var
   tags:
       - level1
       - scored
@@ -266,7 +267,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_1_1_6
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.6_Ensure_separate_partition_exists_for_vartmp
   tags:
       - level2
       - scored
@@ -280,7 +281,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_1_1_7
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.7_Ensure_nodev_option_set_on_vartmp_partition
   tags:
       - level2
       - scored
@@ -299,9 +300,9 @@
       opts: "{{ rhel7cis_vartmp['opts'] }}"
   when:
       - rhel7cis_vartmp['enabled'] == 'yes'
-      - rhel7cis_rule_1_1_8
-      - rhel7cis_rule_1_1_9
-      - rhel7cis_rule_1_1_10
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.8_Ensure_nosuid_option_set_on_vartmp_partition
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.9_Ensure_noexec_option_set_on_vartmp_partition
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.10_Ensure_separate_partition_exists_for_varlog
   tags:
       - level1
       - scored
@@ -316,7 +317,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_1_1_11
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.11_Ensure_separate_partition_exists_for_varlogaudit
   tags:
       - level2
       - scored
@@ -330,7 +331,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_1_1_12
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.12_Ensure_separate_partition_exists_for_home
   tags:
       - level2
       - scored
@@ -344,7 +345,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_1_1_13
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.13_Ensure_nodev_option_set_on_home_partition
   tags:
       - level2
       - scored
@@ -360,7 +361,7 @@
     fstype: "{{ item.fstype }}"
     opts: "nodev"
   when:
-      - rhel7cis_rule_1_1_14
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.14_Ensure_nodev_option_set_on_devshm_partitiov
       - item.mount == "/home"
   with_items: "{{ ansible_mounts }}"
   tags:
@@ -379,9 +380,9 @@
       fstype: tmpfs
       opts: "defaults,nodev,nosuid,noexec"
   when:
-      - rhel7cis_rule_1_1_15
-      - rhel7cis_rule_1_1_16
-      - rhel7cis_rule_1_1_17
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.15_Ensure_nosuid_option_set_on_devshm_partitionrun
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.16_Ensure_noexec_option_set_on_devshm_partition
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.17_Ensure_nodev_option_set_on_removable_media_partitions
   tags:
       - level1
       - scored
@@ -395,7 +396,7 @@
       msg: "--> Not relevant"
   changed_when: no
   when:
-      - rhel7cis_rule_1_1_18
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.18_Ensure_nosuid_option_set_on_removable_media_partitions
   tags:
       - level1
       - notscored
@@ -407,7 +408,7 @@
       msg: "--> Not relevant"
   changed_when: no
   when:
-      - rhel7cis_rule_1_1_19
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.19_Ensure_noexec_option_set_on_removable_media_partitions
   tags:
       - level1
       - notscored
@@ -419,7 +420,7 @@
       msg: "--> Not relevant"
   changed_when: no
   when:
-      - rhel7cis_rule_1_1_20
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.20_Ensure_sticky_bit_is_set_on_all_world-writable_directories
   tags:
       - level1
       - notscored
@@ -432,7 +433,7 @@
   failed_when: no
   #when: sticky_bit_on_worldwritable_dirs_audit.rc == '0'
   when:
-      - rhel7cis_rule_1_1_21
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.21_Disable_Automounting
   tags:
       - level1
       - level2
@@ -457,7 +458,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_1_2_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.2.1_Ensure_package_manager_repositories_are_configured
   tags:
       - level1
       - notscored
@@ -471,7 +472,7 @@
       regexp: "^gpgcheck=0"
       replace: "gpgcheck=1"
   when:
-      - rhel7cis_rule_1_2_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.2.2_Ensure_GPG_keys_are_configured
   tags:
       - level1
       - scored
@@ -485,7 +486,7 @@
   register: yum_repos
   changed_when: no
   when:
-      - rhel7cis_rule_1_2_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.2.2_Ensure_GPG_keys_are_configured
   tags:
       - level1
       - scored
@@ -500,7 +501,7 @@
   with_items:
       - "{{ yum_repos.files }}"
   when:
-      - rhel7cis_rule_1_2_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.2.2_Ensure_GPG_keys_are_configured
   tags:
       - level1
       - scored
@@ -550,7 +551,7 @@
       name: aide
       state: present
   when:
-      - rhel7cis_rule_1_3_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.3.1_Ensure_AIDE_is_installed
   tags:
       - level1
       - scored
@@ -568,7 +569,7 @@
   poll: 0
   when:
       - rhel7cis_config_aide
-      - rhel7cis_rule_1_3_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.3.1_Ensure_AIDE_is_installed
   tags:
       - level1
       - scored
@@ -578,7 +579,7 @@
 
 - name: "SCORED | 1.3.2 | PATCH | Ensure filesystem integrity is regularly checked"
   cron:
-      name: Run AIDE integrity check
+      name: Run AIDE integrity check weekly
       cron_file: "{{ rhel7cis_aide_cron['cron_file'] }}"
       user: "{{ rhel7cis_aide_cron['cron_user'] }}"
       minute: "{{ rhel7cis_aide_cron['aide_minute'] | default('0') }}"
@@ -588,7 +589,7 @@
       weekday: "{{ rhel7cis_aide_cron['aide_weekday'] | default('*') }}"
       job: "{{ rhel7cis_aide_cron['aide_job'] }}"
   when:
-      - rhel7cis_rule_1_3_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.3.2_Ensure_filesystem_integrity_is_regularly_checked
   tags:
       - level1
       - scored
@@ -602,7 +603,7 @@
       path: /etc/grub2.cfg
   register: grub_cfg
   when:
-      - rhel7cis_rule_1_4_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.1_Ensure_permissions_on_bootloader_config_are_configured
   tags:
       - level1
       - scored
@@ -618,7 +619,7 @@
       mode: 0600
   when:
       - grub_cfg.stat.exists and grub_cfg.stat.islnk
-      - rhel7cis_rule_1_4_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.1_Ensure_permissions_on_bootloader_config_are_configured
   tags:
       - level1
       - scored
@@ -632,7 +633,7 @@
   register: grub_pass
   when:
       - rhel7cis_set_boot_pass
-      - rhel7cis_rule_1_4_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.2_Ensure_bootloader_password_is_set
   tags:
       - level1
       - scored
@@ -647,7 +648,7 @@
   notify: generate new grub config
   when:
       - rhel7cis_set_boot_pass and grub_pass is defined and grub_pass.passhash is defined and grub_pass.passhash != ''
-      - rhel7cis_rule_1_4_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.2_Ensure_bootloader_password_is_set
   tags:
       - level1
       - scored
@@ -663,7 +664,7 @@
           regexp: '/sbin/sulogin'
           line: 'ExecStart=-/bin/sh -c \"/usr/sbin/sulogin; /usr/bin/systemctl --fail --no-block default\"'
         when:
-          - rhel7cis_rule_1_4_3
+          - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.3_Ensure_authentication_required_for_single_user_mode
           - ansible_distribution_major_version == 7
         tags:
           - level1
@@ -676,7 +677,7 @@
           regexp: '/sbin/sulogin'
           line: 'ExecStart=-/bin/sh -c \"/usr/sbin/sulogin; /usr/bin/systemctl --fail --no-block default\"'
         when:
-          - rhel7cis_rule_1_4_3
+          - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.3_Ensure_authentication_required_for_single_user_mode
           - ansible_distribution_major_version == 7
         tags:
           - level1
@@ -692,7 +693,7 @@
       line: '*                hard    core            0'
       insertbefore: '^# End of file'
   when:
-      - rhel7cis_rule_1_5_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.1_Ensure_core_dumps_are_restricted
   tags:
       - level1
       - scored
@@ -709,7 +710,7 @@
       sysctl_set: yes
       ignoreerrors: yes
   when:
-      - rhel7cis_rule_1_5_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.1_Ensure_core_dumps_are_restricted
   tags:
       - level1
       - scored
@@ -721,7 +722,7 @@
   shell: dmesg|grep -E "NX|XD" | grep " active"
   changed_when: no
   when:
-      - rhel7cis_rule_1_5_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.2_Ensure_XDNX_support_is_enabled
   tags:
       - level1
       - level2
@@ -737,7 +738,7 @@
       sysctl_set: yes
       ignoreerrors: yes
   when:
-      - rhel7cis_rule_1_5_3
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.3_Ensure_address_space_layout_randomization_ASLR_is_enabled
   tags:
       - level1
       - scored
@@ -748,7 +749,7 @@
   command: prelink -ua
   when:
       - prelink_installed.rc == 0
-      - rhel7cis_rule_1_5_4
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.4_Ensure_prelink_is_disabled
   tags:
       - level1
       - scored
@@ -760,7 +761,7 @@
     name: prelink
     state: absent
   when:
-      - rhel7cis_rule_1_5_4
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.4_Ensure_prelink_is_disabled
   tags:
       - level1
       - scored
@@ -776,7 +777,7 @@
   ignore_errors: yes
   notify: generate new grub config
   when:
-      - rhel7cis_rule_1_6_1_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.6.1.1_Ensure_SELinux_is_not_disabled_in_bootloader_configuration
   tags:
       - level2
       - scored
@@ -790,7 +791,7 @@
       state: enforcing
   when:
       - not rhel7cis_selinux_disable
-      - rhel7cis_rule_1_6_1_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.6.1.2_Ensure_the_SELinux_state_is_enforcing
   tags:
       - level2
       - scored
@@ -805,7 +806,7 @@
       state: enforcing
   when:
       - not rhel7cis_selinux_disable
-      - rhel7cis_rule_1_6_1_3
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.6.1.3_Ensure_SELinux_policy_is_configured
   tags:
       - level2
       - scored
@@ -818,7 +819,7 @@
       name: setroubleshoot
       state: absent
   when:
-      - rhel7cis_rule_1_6_1_4
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.6.1.4_Ensure_no_unconfined_daemons_exist
   tags:
       - level2
       - scored
@@ -855,7 +856,7 @@
       src: etc/motd.j2
       dest: /etc/motd
   when:
-      - rhel7cis_rule_1_7_1_1
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.1_Ensure_message_of_the_day_is_configured_properly
   tags:
       - level1
       - banner
@@ -867,7 +868,7 @@
       src: etc/issue.j2
       dest: /etc/issue
   when:
-      - rhel7cis_rule_1_7_1_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.2_Ensure_local_login_warning_banner_is_configured_properly
   tags:
       - level1
       - patch
@@ -878,7 +879,7 @@
       src: etc/issue.net.j2
       dest: /etc/issue.net
   when:
-      - rhel7cis_rule_1_7_1_3
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.3_Ensure_remote_login_warning_banner_is_configured_properly
   tags:
       - level1
       - banner
@@ -893,7 +894,7 @@
       group: root
       mode: 0644
   when:
-      - rhel7cis_rule_1_7_1_4
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.4_Ensure_permissions_on_etcmotd_are_configured
   tags:
       - level1
       - perms
@@ -908,7 +909,7 @@
       group: root
       mode: 0644
   when:
-      - rhel7cis_rule_1_7_1_5
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.5_Ensure_permissions_on_etcissue_are_configured
   tags:
       - level1
       - perms
@@ -923,7 +924,7 @@
       group: root
       mode: 0644
   when:
-      - rhel7cis_rule_1_7_1_6
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.6_Ensure_permissions_on_etcissue.net_are_configured
   tags:
       - level1
       - perms
@@ -949,7 +950,7 @@
       - { file: '/etc/dconf/db/gdm.d/01-banner-message', regexp:  'banner-message-text', line: "banner-message-text='{{ rhel7cis_warning_banner }}' " }
   when:
       - rhel7cis_gui
-      - rhel7cis_rule_1_7_2
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.2_Ensure_GDM_login_banner_is_configured
   tags:
       - level1
       - level2
@@ -961,10 +962,11 @@
       name: "*"
       state: latest
   when:
-      - rhel7cis_rule_1_8
+      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.8_Ensure_updates_patches_and_additional_security_software_are_installed
   tags:
       - level1
       - level2
       - patch
       - rule_1.8
       - skip_ansible_lint
+

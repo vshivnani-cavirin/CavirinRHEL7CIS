@@ -21,7 +21,7 @@ restrict ::1
 # Use public servers from the pool.ntp.org project.
 # Please consider joining the pool (http://www.pool.ntp.org/join.html).
 {% for server in rhel7cis_time_synchronization_servers -%}
-server {{ server }} {{ rhel7cis_ntp_server_options }}
+server {{ server }} iburst
 {% endfor %}
 
 #broadcast 192.168.1.255 autokey        # broadcast server

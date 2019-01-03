@@ -5,7 +5,7 @@
       line: "max_log_file = 10"
       state: present
   when:
-      - rhel7cis_rule_4_1_1_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.1.1_Ensure_audit_log_storage_size_is_configured
   notify: restart auditd
   tags:
       - level2
@@ -20,7 +20,7 @@
       line: "admin_space_left_action = {{ rhel7cis_auditd['admin_space_left_action'] }}"
       state: present
   when:
-      - rhel7cis_rule_4_1_1_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.1.2_Ensure_system_is_disabled_when_audit_logs_are_full
   notify: restart auditd
   tags:
       - level2
@@ -35,7 +35,7 @@
       line: "space_left_action = email"
       state: present
   when:
-      - rhel7cis_rule_4_1_1_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.1.2_Ensure_system_is_disabled_when_audit_logs_are_full
   notify: restart auditd
   tags:
       - level2
@@ -50,7 +50,7 @@
       line: "max_log_file_action = {{ rhel7cis_auditd['max_log_file_action'] }}"
       state: present
   when:
-      - rhel7cis_rule_4_1_1_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.1.3_Ensure_audit_logs_are_not_automatically_deleted
   notify: restart auditd
   tags:
       - level2
@@ -65,7 +65,7 @@
       enabled: yes
   when:
       - rhel7cis_skip_for_travis == false
-      - rhel7cis_rule_4_1_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.2_Ensure_auditd_service_is_enabled
   tags:
       - level2
       - auditd
@@ -81,7 +81,7 @@
   ignore_errors: yes
   notify: generate new grub config
   when:
-      - rhel7cis_rule_4_1_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.3_Ensure_auditing_for_processes_that_start_prior_to_auditd_is_enabled
   tags:
       - level2
       - auditd
@@ -96,7 +96,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.4_Ensure_events_that_modify_date_and_time_information_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -112,7 +112,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_5
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.5_Ensure_events_that_modify_usergroup_information_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -128,7 +128,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_6
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.6_Ensure_events_that_modify_the_systems_network_environment_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -144,7 +144,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_7
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.7_Ensure_events_that_modify_the_systems_Mandatory_Access_Controls_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -160,7 +160,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_8
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.8_Ensure_login_and_logout_events_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -176,7 +176,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_9
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.9_Ensure_session_initiation_information_is_collected
   notify: restart auditd
   tags:
       - level2
@@ -192,7 +192,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_10
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.10_Ensure_discretionary_access_control_permission_modification_events_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -208,7 +208,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_11
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.11_Ensure_unsuccessful_unauthorized_file_access_attempts_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -222,7 +222,7 @@
   changed_when: no
   check_mode: no
   when:
-      - rhel7cis_rule_4_1_12
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.12_Ensure_use_of_privileged_commands_is_collected
   tags:
       - level2
       - auditd
@@ -238,7 +238,7 @@
       mode: 0600
   notify: restart auditd
   when:
-      - rhel7cis_rule_4_1_12
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.12_Ensure_use_of_privileged_commands_is_collected
   tags:
       - level2
       - auditd
@@ -253,7 +253,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_13
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.13_Ensure_successful_file_system_mounts_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -269,7 +269,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_14
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.14_Ensure_file_deletion_events_by_users_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -285,7 +285,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_15
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.15_Ensure_changes_to_system_administration_scope_sudoers_is_collected
   notify: restart auditd
   tags:
       - level2
@@ -301,7 +301,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_16
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.16_Ensure_system_administrator_actions_sudolog_are_collected
   notify: restart auditd
   tags:
       - level2
@@ -317,7 +317,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_17
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.17_Ensure_kernel_module_loading_and_unloading_is_collected
   notify: restart auditd
   tags:
       - level2
@@ -333,7 +333,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_4_1_18
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.1.18_Ensure_the_audit_configuration_is_immutable
   notify: restart auditd
   tags:
       - level2
@@ -346,7 +346,7 @@
       name: "{{ rhel7cis_syslog }}"
       state: present
   when:
-      - rhel7cis_rule_4_2_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.3_Ensure_rsyslog_or_syslog-ng_is_installed
   tags:
       - level1
       - level2
@@ -357,7 +357,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_1_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.1.1_Ensure_rsyslog_Service_is_enabled
   tags:
       - level1
       - level2
@@ -369,7 +369,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_1_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.1.2_Ensure_logging_is_configured
   tags:
       - level1
       - level2
@@ -383,7 +383,7 @@
       regexp: '^\$FileCreateMode'
       line: '$FileCreateMode 0640'
   when:
-      - rhel7cis_rule_4_2_1_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.1.3_Ensure_rsyslog_default_file_permissions_configured
   tags:
       - level1
       - level2
@@ -394,7 +394,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_1_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.1.4_Ensure_rsyslog_is_configured_to_send_logs_to_a_remote_log_host
   tags:
       - level1
       - level2
@@ -406,7 +406,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_1_5
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.1.5_Ensure_remote_rsyslog_messages_are_only_accepted_on_designated_log_hosts.
   tags:
       - level1
       - level2
@@ -418,7 +418,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_1_5
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.1.5_Ensure_remote_rsyslog_messages_are_only_accepted_on_designated_log_hosts.
   tags:
       - level1
       - level2
@@ -430,7 +430,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_2_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.2.1_Ensure_syslog-ng_service_is_enabled
   tags:
       - level1
       - level2
@@ -442,7 +442,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_2_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.2.2_Ensure_logging_is_configured
   tags:
       - level1
       - level2
@@ -454,7 +454,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_2_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.2.3_Ensure_syslog-ng_default_file_permissions_configured
   tags:
       - level1
       - level2
@@ -466,7 +466,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_2_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.2.4_Ensure_syslog-ng_is_configured_to_send_logs_to_a_remote_log_host
   tags:
       - level1
       - level2
@@ -478,7 +478,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_4_2_2_5
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.2.5_Ensure_remote_syslog-ng_messages_are_only_accepted_on_designated_log_hosts
   tags:
       - level1
       - level2
@@ -491,7 +491,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_4_2_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_4.2.4_Ensure_permissions_on_all_logfiles_are_configured
   tags:
       - level1
       - level2

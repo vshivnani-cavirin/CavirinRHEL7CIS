@@ -2,7 +2,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_1_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.1_Audit_system_file_permissions
   tags:
       - level2
       - patch
@@ -16,7 +16,7 @@
       group: root
       mode: 0644
   when:
-      - rhel7cis_rule_6_1_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.2_Ensure_permissions_on_etcpasswd_are_configured
   tags:
       - level1
       - level2
@@ -30,7 +30,7 @@
       group: root
       mode: 0000
   when:
-      - rhel7cis_rule_6_1_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.3_Ensure_permissions_on_etcshadow_are_configured
   tags:
       - level1
       - level2
@@ -44,7 +44,7 @@
       group: root
       mode: 0644
   when:
-      - rhel7cis_rule_6_1_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.4_Ensure_permissions_on_etcgroup_are_configured
   tags:
       - level1
       - level2
@@ -58,7 +58,7 @@
       group: root
       mode: 0000
   when:
-      - rhel7cis_rule_6_1_5
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.5_Ensure_permissions_on_etcgshadow_are_configured
   tags:
       - level1
       - level2
@@ -72,7 +72,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_6_1_6
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.6_Ensure_permissions_on_etcpasswd-_are_configured
   tags:
       - level1
       - level2
@@ -86,7 +86,7 @@
       group: root
       mode: 0000
   when:
-      - rhel7cis_rule_6_1_7
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.7_Ensure_permissions_on_etcshadow-_are_configured
   tags:
       - level1
       - level2
@@ -100,7 +100,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_6_1_8
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.8_Ensure_permissions_on_etcgroup-_are_configured
   tags:
       - level1
       - level2
@@ -114,7 +114,7 @@
       group: root
       mode: 0600
   when:
-      - rhel7cis_rule_6_1_9
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.9_Ensure_permissions_on_etcgshadow-_are_configured
   tags:
       - level1
       - level2
@@ -125,7 +125,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_1_10
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.10_Ensure_no_world_writable_files_exist
   tags:
       - level1
       - level2
@@ -137,7 +137,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_1_11
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.11_Ensure_no_unowned_files_or_directories_exist
   tags:
       - level1
       - level2
@@ -149,7 +149,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_1_12
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.12_Ensure_no_ungrouped_files_or_directories_exist
   tags:
       - level1
       - level2
@@ -161,7 +161,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_1_13
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.13_Audit_SUID_executables
   tags:
       - level1
       - level2
@@ -173,7 +173,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_1_14
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.1.14_Audit_SGID_executables
   tags:
       - level1
       - level2
@@ -188,7 +188,7 @@
   with_items: "{{ empty_password_accounts.stdout_lines }}"
   when:
       - empty_password_accounts.rc
-      - rhel7cis_rule_6_2_1
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.1_Ensure_password_fields_are_not_empty
   tags:
       - level1
       - level2
@@ -200,7 +200,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_6_2_2
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.2_Ensure_no_legacy__entries_exist_in_etcpasswd
   tags:
       - level1
       - level2
@@ -212,7 +212,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_6_2_3
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.3_Ensure_no_legacy__entries_exist_in_etcshadow
   tags:
       - level1
       - level2
@@ -224,7 +224,7 @@
   changed_when: no
   failed_when: no
   when:
-      - rhel7cis_rule_6_2_4
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.4_Ensure_no_legacy__entries_exist_in_etcgroup
   tags:
       - level1
       - level2
@@ -238,7 +238,7 @@
   with_items: "{{ uid_zero_accounts_except_root.stdout_lines }}"
   when:
       - uid_zero_accounts_except_root.rc
-      - rhel7cis_rule_6_2_5
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.5_Ensure_root_is_the_only_UID_0_account
   tags:
       - level1
       - level2
@@ -249,7 +249,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_6
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.6_Ensure_root_PATH_Integrity
   tags:
       - level1
       - level2
@@ -261,7 +261,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_7
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.7_Ensure_all_users_home_directories_exist
   tags:
       - level1
       - level2
@@ -273,7 +273,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_8
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.8_Ensure_users_home_directories_permissions_are_750_or_more_restrictive
   tags:
       - level1
       - level2
@@ -285,7 +285,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_9
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.9_Ensure_users_own_their_home_directories
   tags:
       - level1
       - level2
@@ -297,7 +297,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_10
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.10_Ensure_users_dot_files_are_not_group_or_world_writable
   tags:
       - level1
       - level2
@@ -311,7 +311,7 @@
       dest: "~{{ item }}/.forward"
   with_items: "{{ users.stdout_lines }}"
   when:
-      - rhel7cis_rule_6_2_11
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.11_Ensure_no_users_have_.forward_files
   tags:
       - level1
       - level2
@@ -324,7 +324,7 @@
       dest: "~{{ item }}/.netrc"
   with_items: "{{ users.stdout_lines }}"
   when:
-      - rhel7cis_rule_6_2_12
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.12_Ensure_no_users_have_.netrc_files
   tags:
       - level1
       - level2
@@ -348,7 +348,7 @@
       dest: "~{{ item }}/.rhosts"
   with_items: "{{ users.stdout_lines }}"
   when:
-      - rhel7cis_rule_6_2_14
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.14_Ensure_no_users_have_.rhosts_files
   tags:
       - level1
       - level2
@@ -359,7 +359,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_15
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.15_Ensure_all_groups_in_etcpasswd_exist_in_etcgroup
   tags:
       - level1
       - level2
@@ -371,7 +371,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_16
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.16_Ensure_no_duplicate_UIDs_exist
   tags:
       - level1
       - level2
@@ -383,7 +383,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_17
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.17_Ensure_no_duplicate_GIDs_exist
   tags:
       - level1
       - level2
@@ -395,7 +395,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_18
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.18_Ensure_no_duplicate_user_names_exist
   tags:
       - level1
       - level2
@@ -407,7 +407,7 @@
   command: /bin/true
   changed_when: no
   when:
-      - rhel7cis_rule_6_2_19
+- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_6.2.19_Ensure_no_duplicate_group_names_exist
   tags:
       - level1
       - level2
