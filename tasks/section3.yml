@@ -1,6 +1,6 @@
-- name: "SCORED | 3.1.1 | PATCH | Ensure IP forwarding is disabled"
+- name: "SCORED | 3_1_1 | PATCH | Ensure IP forwarding is disabled"
   sysctl:
-      name: net.ipv4.ip_forward
+      name: net_ipv4_ip_forward
       value: 0
       state: present
       reload: yes
@@ -9,122 +9,122 @@
       - sysctl flush ipv4 route table
   when:
       - rhel7cis_is_router == false
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.1.1_Ensure_IP_forwarding_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_1_1_Ensure_IP_forwarding_is_disabled
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.1.1
+      - rule_3_1_1
 
-- name: "SCORED | 3.1.2 | PATCH | Ensure packet redirect sending is disabled"
+- name: "SCORED | 3_1_2 | PATCH | Ensure packet redirect sending is disabled"
   sysctl:
-      name: '{{ item.name }}'
-      value: '{{ item.value }}'
+      name: '{{ item_name }}'
+      value: '{{ item_value }}'
       sysctl_set: yes
       state: present
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.send_redirects, value: 0 }
-      - { name: net.ipv4.conf.default.send_redirects, value: 0 }
+      - { name: net_ipv4_conf_all_send_redirects, value: 0 }
+      - { name: net_ipv4_conf_default_send_redirects, value: 0 }
   notify:
       - sysctl flush ipv4 route table
   when:
       - rhel7cis_is_router == false
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.1.2_Ensure_packet_redirect_sending_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_1_2_Ensure_packet_redirect_sending_is_disabled
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.1.2
+      - rule_3_1_2
 
-- name: "SCORED | 3.2.1 | PATCH | Ensure source routed packets are not accepted"
+- name: "SCORED | 3_2_1 | PATCH | Ensure source routed packets are not accepted"
   sysctl:
-      name: '{{ item.name }}'
-      value: '{{ item.value }}'
+      name: '{{ item_name }}'
+      value: '{{ item_value }}'
       sysctl_set: yes
       state: present
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.accept_source_route, value: 0 }
-      - { name: net.ipv4.conf.default.accept_source_route, value: 0 }
+      - { name: net_ipv4_conf_all_accept_source_route, value: 0 }
+      - { name: net_ipv4_conf_default_accept_source_route, value: 0 }
   notify:
       - sysctl flush ipv4 route table
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.2.1_Ensure_source_routed_packets_are_not_accepted
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_1_Ensure_source_routed_packets_are_not_accepted
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.2.1
+      - rule_3_2_1
 
-- name: "SCORED | 3.2.2 | PATCH | Ensure ICMP redirects are not accepted"
+- name: "SCORED | 3_2_2 | PATCH | Ensure ICMP redirects are not accepted"
   sysctl:
-      name: '{{ item.name }}'
-      value: '{{ item.value }}'
+      name: '{{ item_name }}'
+      value: '{{ item_value }}'
       sysctl_set: yes
       state: present
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.accept_redirects, value: 0 }
-      - { name: net.ipv4.conf.default.accept_redirects, value: 0 }
+      - { name: net_ipv4_conf_all_accept_redirects, value: 0 }
+      - { name: net_ipv4_conf_default_accept_redirects, value: 0 }
   notify:
       - sysctl flush ipv4 route table
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.2.2_Ensure_ICMP_redirects_are_not_accepted
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_2_Ensure_ICMP_redirects_are_not_accepted
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.2.2
+      - rule_3_2_2
 
-- name: "SCORED | 3.2.3 | PATCH | Ensure secure ICMP redirects are not accepted"
+- name: "SCORED | 3_2_3 | PATCH | Ensure secure ICMP redirects are not accepted"
   sysctl:
-      name: '{{ item.name }}'
-      value: '{{ item.value }}'
+      name: '{{ item_name }}'
+      value: '{{ item_value }}'
       sysctl_set: yes
       state: present
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.secure_redirects, value: 0 }
-      - { name: net.ipv4.conf.default.secure_redirects, value: 0 }
+      - { name: net_ipv4_conf_all_secure_redirects, value: 0 }
+      - { name: net_ipv4_conf_default_secure_redirects, value: 0 }
   notify:
       - sysctl flush ipv4 route table
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.2.3_Ensure_secure_ICMP_redirects_are_not_accepted
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_3_Ensure_secure_ICMP_redirects_are_not_accepted
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.2.3
+      - rule_3_2_3
 
-- name: "SCORED | 3.2.4 | PATCH | Ensure suspicious packets are logged"
+- name: "SCORED | 3_2_4 | PATCH | Ensure suspicious packets are logged"
   sysctl:
-      name: '{{ item.name }}'
-      value: '{{ item.value }}'
+      name: '{{ item_name }}'
+      value: '{{ item_value }}'
       sysctl_set: yes
       state: present
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.log_martians, value: 1 }
-      - { name: net.ipv4.conf.default.log_martians, value: 1 }
+      - { name: net_ipv4_conf_all_log_martians, value: 1 }
+      - { name: net_ipv4_conf_default_log_martians, value: 1 }
   notify:
       - sysctl flush ipv4 route table
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.2.4_Ensure_suspicious_packets_are_logged
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_4_Ensure_suspicious_packets_are_logged
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.2.4
+      - rule_3_2_4
 
-- name: "SCORED | 3.2.5 | PATCH | Ensure broadcast ICMP requests are ignored"
+- name: "SCORED | 3_2_5 | PATCH | Ensure broadcast ICMP requests are ignored"
   sysctl:
-      name: net.ipv4.icmp_echo_ignore_broadcasts
+      name: net_ipv4_icmp_echo_ignore_broadcasts
       value: 1
       state: present
       reload: yes
@@ -132,16 +132,16 @@
   notify:
       - sysctl flush ipv4 route table
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.2.5_Ensure_broadcast_ICMP_requests_are_ignored
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_5_Ensure_broadcast_ICMP_requests_are_ignored
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.2.5
+      - rule_3_2_5
 
-- name: "SCORED | 3.2.6 | PATCH | Ensure bogus ICMP responses are ignored"
+- name: "SCORED | 3_2_6 | PATCH | Ensure bogus ICMP responses are ignored"
   sysctl:
-      name: net.ipv4.icmp_ignore_bogus_error_responses
+      name: net_ipv4_icmp_ignore_bogus_error_responses
       value: 1
       state: present
       reload: yes
@@ -149,37 +149,37 @@
   notify:
       - sysctl flush ipv4 route table
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.2.6_Ensure_bogus_ICMP_responses_are_ignored
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_6_Ensure_bogus_ICMP_responses_are_ignored
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.2.6
+      - rule_3_2_6
 
-- name: "SCORED | 3.2.7 | PATCH | Ensure Reverse Path Filtering is enabled"
+- name: "SCORED | 3_2_7 | PATCH | Ensure Reverse Path Filtering is enabled"
   sysctl:
-      name: '{{ item.name }}'
-      value: '{{ item.value }}'
+      name: '{{ item_name }}'
+      value: '{{ item_value }}'
       sysctl_set: yes
       state: present
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv4.conf.all.rp_filter, value: 1 }
-      - { name: net.ipv4.conf.default.rp_filter, value: 1 }
+      - { name: net_ipv4_conf_all_rp_filter, value: 1 }
+      - { name: net_ipv4_conf_default_rp_filter, value: 1 }
   notify:
       - sysctl flush ipv4 route table
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.2.7_Ensure_Reverse_Path_Filtering_is_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_7_Ensure_Reverse_Path_Filtering_is_enabled
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.2.7
+      - rule_3_2_7
 
-- name: "SCORED | 3.2.8 | PATCH | Ensure TCP SYN Cookies is enabled"
+- name: "SCORED | 3_2_8 | PATCH | Ensure TCP SYN Cookies is enabled"
   sysctl:
-      name: net.ipv4.tcp_syncookies
+      name: net_ipv4_tcp_syncookies
       value: 1
       state: present
       reload: yes
@@ -187,187 +187,187 @@
   notify:
       - sysctl flush ipv4 route table
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.2.8_Ensure_TCP_SYN_Cookies_is_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_8_Ensure_TCP_SYN_Cookies_is_enabled
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.2.8
+      - rule_3_2_8
 
-- name: "SCORED | 3.3.1 | PATCH | Ensure IPv6 router advertisements are not accepted"
+- name: "SCORED | 3_3_1 | PATCH | Ensure IPv6 router advertisements are not accepted"
   sysctl:
-      name: '{{ item.name }}'
-      value: '{{ item.value }}'
+      name: '{{ item_name }}'
+      value: '{{ item_value }}'
       sysctl_set: yes
       state: present
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv6.conf.all.accept_ra, value: 0 }
-      - { name: net.ipv6.conf.default.accept_ra, value: 0 }
+      - { name: net_ipv6_conf_all_accept_ra, value: 0 }
+      - { name: net_ipv6_conf_default_accept_ra, value: 0 }
   notify:
       - sysctl flush ipv6 route table
   when:
       - rhel7cis_ipv6_required == true
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.3.1_Ensure_IPv6_router_advertisements_are_not_accepted
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_3_1_Ensure_IPv6_router_advertisements_are_not_accepted
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.3.1
+      - rule_3_3_1
 
-- name: "SCORED | 3.3.2 | PATCH | Ensure IPv6 redirects are not accepted"
+- name: "SCORED | 3_3_2 | PATCH | Ensure IPv6 redirects are not accepted"
   sysctl:
-      name: '{{ item.name }}'
-      value: '{{ item.value }}'
+      name: '{{ item_name }}'
+      value: '{{ item_value }}'
       sysctl_set: yes
       state: present
       reload: yes
       ignoreerrors: yes
   with_items:
-      - { name: net.ipv6.conf.all.accept_redirects, value: 0 }
-      - { name: net.ipv6.conf.default.accept_redirects, value: 0 }
+      - { name: net_ipv6_conf_all_accept_redirects, value: 0 }
+      - { name: net_ipv6_conf_default_accept_redirects, value: 0 }
   notify:
       - sysctl flush ipv6 route table
   when:
       - rhel7cis_ipv6_required == true
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.3.2_Ensure_IPv6_redirects_are_not_accepted
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_3_2_Ensure_IPv6_redirects_are_not_accepted
   tags:
       - level1
       - sysctl
       - patch
-      - rule_3.3.2
+      - rule_3_3_2
 
-- name: "NOTSCORED | 3.3.3 | PATCH | Ensure IPv6 is disabled"
+- name: "NOTSCORED | 3_3_3 | PATCH | Ensure IPv6 is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?options ipv6 disable="
       line: "options ipv6 disable=1"
       create: yes
   when:
       - rhel7cis_ipv6_required == false
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.3.3_Ensure_IPv6_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_3_3_Ensure_IPv6_is_disabled
   tags:
       - level1
       - patch
-      - rule_3.3.3
+      - rule_3_3_3
 
-- name: "SCORED | 3.4.1 | PATCH | Ensure TCP Wrappers is installed"
+- name: "SCORED | 3_4_1 | PATCH | Ensure TCP Wrappers is installed"
   yum:
     name: tcp_wrappers
     state: present
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.4.1_Ensure_TCP_Wrappers_is_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_1_Ensure_TCP_Wrappers_is_installed
   tags:
       - level1
       - patch
-      - rule_3.4.1
+      - rule_3_4_1
 
-- name: "SCORED | 3.4.2 | PATCH | Ensure /etc/hosts.allow is configured"
+- name: "SCORED | 3_4_2 | PATCH | Ensure /etc/hosts_allow is configured"
   template:
-      src: hosts.allow.j2
-      dest: /etc/hosts.allow
+      src: hosts_allow_j2
+      dest: /etc/hosts_allow
       owner: root
       group: root
       mode: 0644
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.4.2_Ensure_etchosts.allow_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_2_Ensure_etchosts_allow_is_configured
   tags:
       - level1
       - patch
-      - rule_3.4.2
+      - rule_3_4_2
 
-- name: "SCORED | 3.4.3 | PATCH | Ensure /etc/hosts.deny is configured"
+- name: "SCORED | 3_4_3 | PATCH | Ensure /etc/hosts_deny is configured"
   lineinfile:
-      dest: /etc/hosts.deny
+      dest: /etc/hosts_deny
       regexp: "^(#)?ALL"
       line: "ALL: ALL"
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.4.3_Ensure_etchosts.deny_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_3_Ensure_etchosts_deny_is_configured
   tags:
       - level1
       - patch
-      - rule_3.4.3
+      - rule_3_4_3
 
-- name: "SCORED | 3.4.4 | PATCH | Ensure permissions on /etc/hosts.allow are configured"
+- name: "SCORED | 3_4_4 | PATCH | Ensure permissions on /etc/hosts_allow are configured"
   file:
-      dest: /etc/hosts.allow
+      dest: /etc/hosts_allow
       owner: root
       group: root
       mode: 0644
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.4.4_Ensure_permissions_on_etchosts.allow_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_4_Ensure_permissions_on_etchosts_allow_are_configured
   tags:
       - level1
       - patch
-      - rule_3.4.4
+      - rule_3_4_4
 
-- name: "SCORED | 3.4.5 | PATCH | Ensure permissions on /etc/hosts.deny are 644"
+- name: "SCORED | 3_4_5 | PATCH | Ensure permissions on /etc/hosts_deny are 644"
   file:
-      dest: /etc/hosts.deny
+      dest: /etc/hosts_deny
       owner: root
       group: root
       mode: 0644
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.4.5_Ensure_permissions_on_etchosts.deny_are_644
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_5_Ensure_permissions_on_etchosts_deny_are_644
   tags:
       - level1
       - patch
-      - rule_3.4.5
+      - rule_3_4_5
 
-- name: "NOTSCORED | 3.5.1 | PATCH | Ensure DCCP is disabled"
+- name: "NOTSCORED | 3_5_1 | PATCH | Ensure DCCP is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install dccp(\\s|$)"
       line: "install dccp /bin/true"
       create: yes
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.5.1_Ensure_DCCP_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_5_1_Ensure_DCCP_is_disabled
   tags:
       - level1
       - patch
-      - rule_3.5.1
+      - rule_3_5_1
 
-- name: "NOTSCORED | 3.5.2 | PATCH | Ensure SCTP is disabled"
+- name: "NOTSCORED | 3_5_2 | PATCH | Ensure SCTP is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install sctp(\\s|$)"
       line: "install sctp /bin/true"
       create: yes
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.5.2_Ensure_SCTP_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_5_2_Ensure_SCTP_is_disabled
   tags:
       - level1
       - patch
-      - rule_3.5.2
+      - rule_3_5_2
 
-- name: "NOTSCORED | 3.5.3 | PATCH | Ensure RDS is disabled"
+- name: "NOTSCORED | 3_5_3 | PATCH | Ensure RDS is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install rds(\\s|$)"
       line: "install rds /bin/true"
       create: yes
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.5.3_Ensure_RDS_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_5_3_Ensure_RDS_is_disabled
   tags:
       - level1
       - patch
-      - rule_3.5.3
+      - rule_3_5_3
 
-- name: "NOTSCORED | 3.5.4 | PATCH | Ensure TIPC is disabled"
+- name: "NOTSCORED | 3_5_4 | PATCH | Ensure TIPC is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install tipc(\\s|$)"
       line: "install tipc /bin/true"
       create: yes
   when:
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.5.4_Ensure_TIPC_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_5_4_Ensure_TIPC_is_disabled
   tags:
       - level1
       - patch
-      - rule_3.5.4
+      - rule_3_5_4
 
-- name: "SCORED | 3.6 | PATCH | Ensure firewalld is installed and started | CUSTOM"
+- name: "SCORED | 3_6 | PATCH | Ensure firewalld is installed and started | CUSTOM"
   yum:
       name: firewalld
       state: present
@@ -375,9 +375,9 @@
   tags:
       - level1
       - patch
-      - rule_3.6
+      - rule_3_6
 
-- name: "SCORED | 3.6 | PATCH | Ensure firewalld is installed and started | CUSTOM"
+- name: "SCORED | 3_6 | PATCH | Ensure firewalld is installed and started | CUSTOM"
   service:
       name: firewalld
       state: started
@@ -386,96 +386,96 @@
   tags:
       - level1
       - patch
-      - rule_3.6
+      - rule_3_6
 
-- name: "SCORED | 3.6.1 | PATCH | Ensure iptables is installed"
+- name: "SCORED | 3_6_1 | PATCH | Ensure iptables is installed"
   yum:
       name: iptables
       state: present
   when:
       - rhel7cis_firewall == "iptables"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.1_Ensure_iptables_is_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_1_Ensure_iptables_is_installed
   tags:
       - level1
       - patch
-      - rule_3.6.1
+      - rule_3_6_1
 
-- name: "SCORED | 3.6.1 | PATCH | Ensure iptables is installed and started"
+- name: "SCORED | 3_6_1 | PATCH | Ensure iptables is installed and started"
   service:
       name: iptables
       state: started
       enabled: yes
   when:
       - rhel7cis_firewall == "iptables"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.1_Ensure_iptables_is_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_1_Ensure_iptables_is_installed
   tags:
       - level1
       - patch
-      - rule_3.6.1
+      - rule_3_6_1
 
-- name: "SCORED | 3.6.2 | PATCH | Ensure default deny firewall policy"
+- name: "SCORED | 3_6_2 | PATCH | Ensure default deny firewall policy"
   lineinfile:
-      dest: /etc/firewalld/firewalld.conf
+      dest: /etc/firewalld/firewalld_conf
       regexp: "^DefaultZone"
       line: "DefaultZone=drop"
   when:
       - rhel7cis_firewall == "firewalld"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.2_Ensure_default_deny_firewall_policy
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_2_Ensure_default_deny_firewall_policy
   tags:
       - level1
       - patch
-      - rule_3.6.2
+      - rule_3_6_2
 
-- name: "SCORED | 3.6.2 | PATCH | Ensure default deny firewall policy"
+- name: "SCORED | 3_6_2 | PATCH | Ensure default deny firewall policy"
   firewalld:
       state: enabled
       zone: drop
       permanent: true
   when:
       - rhel7cis_firewall == "firewalld"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.2_Ensure_default_deny_firewall_policy
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_2_Ensure_default_deny_firewall_policy
   tags:
       - level1
       - patch
-      - rule_3.6.2
+      - rule_3_6_2
 
-- name: "SCORED | 3.6.2 | PATCH | Ensure default deny firewall policy"
+- name: "SCORED | 3_6_2 | PATCH | Ensure default deny firewall policy"
   command: /bin/true
   changed_when: no
   when:
       - rhel7cis_firewall == "iptables"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.2_Ensure_default_deny_firewall_policy
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_2_Ensure_default_deny_firewall_policy
   tags:
       - level1
       - patch
-      - rule_3.6.2
+      - rule_3_6_2
       - notimplemented
 
-- name: "SCORED | 3.6.3 | PATCH | Ensure loopback traffic is configured"
+- name: "SCORED | 3_6_3 | PATCH | Ensure loopback traffic is configured"
   command: /bin/true
   changed_when: no
   when:
       - rhel7cis_firewall == "iptables"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.3_Ensure_loopback_traffic_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_3_Ensure_loopback_traffic_is_configured
   tags:
       - level1
       - patch
-      - rule_3.6.3
+      - rule_3_6_3
       - notimplemented
 
-- name: "NOTSCORED | 3.6.4 | PATCH | Ensure outbound and established connections are configured"
+- name: "NOTSCORED | 3_6_4 | PATCH | Ensure outbound and established connections are configured"
   command: /bin/true
   changed_when: no
   when:
       - rhel7cis_firewall == "iptables"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.4_Ensure_outbound_and_established_connections_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_4_Ensure_outbound_and_established_connections_are_configured
   tags:
       - level1
       - patch
-      - rule_3.6.4
+      - rule_3_6_4
       - notimplemented
 
-- name: "SCORED | 3.6.5 | PATCH | Ensure firewall rules exist for all open ports"
+- name: "SCORED | 3_6_5 | PATCH | Ensure firewall rules exist for all open ports"
   firewalld:
       service: "{{ item }}"
       state: enabled
@@ -486,29 +486,30 @@
   with_items: "{{ rhel7cis_firewall_services }}"
   when:
       - rhel7cis_firewall == "firewalld"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.5_Ensure_firewall_rules_exist_for_all_open_ports
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_5_Ensure_firewall_rules_exist_for_all_open_ports
   tags:
       - level1
       - patch
-      - rule_3.6.5
+      - rule_3_6_5
 
-- name: "SCORED | 3.6.5 | PATCH | Ensure firewall rules exist for all open ports"
+- name: "SCORED | 3_6_5 | PATCH | Ensure firewall rules exist for all open ports"
   command: /bin/true
   changed_when: no
   when:
       - rhel7cis_firewall == "iptables"
-- root.CISPP_xccdf_org.cisecurity.benchmarks_rule_3.6.5_Ensure_firewall_rules_exist_for_all_open_ports
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_5_Ensure_firewall_rules_exist_for_all_open_ports
   tags:
       - level1
       - patch
-      - rule_3.6.5
+      - rule_3_6_5
       - notimplemented
 
-- name: "NOTSCORED | 3.7 | PATCH | Ensure wireless interfaces are disabled"
+- name: "NOTSCORED | 3_7 | PATCH | Ensure wireless interfaces are disabled"
   command: /bin/true
   changed_when: no
   tags:
       - level1
       - level2
       - patch
-      - rule_3.7
+      - rule_3_7
+

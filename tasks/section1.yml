@@ -1,6 +1,6 @@
-- name: "SCORED | 1.1.1.1 | PATCH | Ensure mounting of cramfs filesystems is disabled"
+- name: "SCORED | 1_1_1_1 | PATCH | Ensure mounting of cramfs filesystems is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install cramfs(\\s|$)"
       line: "install cramfs /bin/true"
       create: yes
@@ -10,288 +10,288 @@
       - level1
       - scored
       - patch
-      - rule_1.1.1.1
+      - rule_1_1_1_1
       - cramfs
       - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_1_Ensure_mounting_of_cramfs_filesystems_is_disabled
 
-- name: "SCORED | 1.1.1.1 | PATCH | Remove cramfs module"
+- name: "SCORED | 1_1_1_1 | PATCH | Remove cramfs module"
   modprobe:
     name: cramfs
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.1_Ensure_mounting_of_cramfs_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_1_Ensure_mounting_of_cramfs_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.1
+      - rule_1_1_1_1
       - cramfs
 
-- name: "SCORED | 1.1.1.2 | PATCH | Ensure mounting of freevxfs filesystems is disabled"
+- name: "SCORED | 1_1_1_2 | PATCH | Ensure mounting of freevxfs filesystems is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install freevxfs(\\s|$)"
       line: "install freevxfs /bin/true"
       create: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.2_Ensure_mounting_of_freevxfs_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_2_Ensure_mounting_of_freevxfs_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.2
+      - rule_1_1_1_2
       - freevxfs
 
-- name: "SCORED | 1.1.1.2 | PATCH | Remove freevxfs module"
+- name: "SCORED | 1_1_1_2 | PATCH | Remove freevxfs module"
   modprobe:
     name: freevxfs
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.2_Ensure_mounting_of_freevxfs_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_2_Ensure_mounting_of_freevxfs_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.2
+      - rule_1_1_1_2
       - freevxfs
 
-- name: "SCORED | 1.1.1.3 | PATCH | Ensure mounting of jffs2 filesystems is disabled"
+- name: "SCORED | 1_1_1_3 | PATCH | Ensure mounting of jffs2 filesystems is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install jffs2(\\s|$)"
       line: "install jffs2 /bin/true"
       create: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.3_Ensure_mounting_of_jffs2_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_3_Ensure_mounting_of_jffs2_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.3
+      - rule_1_1_1_3
       - jffs2
 
-- name: "SCORED | 1.1.1.3 | PATCH | Remove jffs2 module"
+- name: "SCORED | 1_1_1_3 | PATCH | Remove jffs2 module"
   modprobe:
     name: jffs2
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.3_Ensure_mounting_of_jffs2_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_3_Ensure_mounting_of_jffs2_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.3
+      - rule_1_1_1_3
       - jffs2
 
-- name: "SCORED | 1.1.1.4 | PATCH | Ensure mounting of hfs filesystems is disabled"
+- name: "SCORED | 1_1_1_4 | PATCH | Ensure mounting of hfs filesystems is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install hfs(\\s|$)"
       line: "install hfs /bin/true"
       create: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.4_Ensure_mounting_of_hfs_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_4_Ensure_mounting_of_hfs_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.4
+      - rule_1_1_1_4
       - hfs
 
-- name: "SCORED | 1.1.1.4 | PATCH | Remove hfs module"
+- name: "SCORED | 1_1_1_4 | PATCH | Remove hfs module"
   modprobe:
     name: hfs
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.4_Ensure_mounting_of_hfs_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_4_Ensure_mounting_of_hfs_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.4
+      - rule_1_1_1_4
       - hfs
 
-- name: "SCORED | 1.1.1.5 | PATCH | Ensure mounting of hfsplus filesystems is disabled"
+- name: "SCORED | 1_1_1_5 | PATCH | Ensure mounting of hfsplus filesystems is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install hfsplus(\\s|$)"
       line: "install hfsplus /bin/true"
       create: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.5_Ensure_mounting_of_hfsplus_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_5_Ensure_mounting_of_hfsplus_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.5
+      - rule_1_1_1_5
       - hfsplus
 
-- name: "SCORED | 1.1.1.5 | PATCH | Remove hfsplus module"
+- name: "SCORED | 1_1_1_5 | PATCH | Remove hfsplus module"
   modprobe:
     name: hfsplus
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.5_Ensure_mounting_of_hfsplus_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_5_Ensure_mounting_of_hfsplus_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.5
+      - rule_1_1_1_5
       - hfsplus
 
-- name: "SCORED | 1.1.1.6 | PATCH | Ensure mounting of squashfs filesystems is disabled"
+- name: "SCORED | 1_1_1_6 | PATCH | Ensure mounting of squashfs filesystems is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install squashfs(\\s|$)"
       line: "install squashfs /bin/true"
       create: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.6_Ensure_mounting_of_squashfs_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_6_Ensure_mounting_of_squashfs_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.6
+      - rule_1_1_1_6
       - squashfs
 
-- name: "SCORED | 1.1.1.6 | PATCH | Remove squashfs module"
+- name: "SCORED | 1_1_1_6 | PATCH | Remove squashfs module"
   modprobe:
     name: squashfs
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.6_Ensure_mounting_of_squashfs_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_6_Ensure_mounting_of_squashfs_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.6
+      - rule_1_1_1_6
       - squashfs
 
-- name: "SCORED | 1.1.1.7 | PATCH | Ensure mounting of udf filesystems is disabled"
+- name: "SCORED | 1_1_1_7 | PATCH | Ensure mounting of udf filesystems is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install udf(\\s|$)"
       line: "install udf /bin/true"
       create: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.7_Ensure_mounting_of_udf_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_7_Ensure_mounting_of_udf_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.7
+      - rule_1_1_1_7
       - udf
 
-- name: "SCORED | 1.1.1.7 | PATCH | Remove udf module"
+- name: "SCORED | 1_1_1_7 | PATCH | Remove udf module"
   modprobe:
     name: udf
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.7_Ensure_mounting_of_udf_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_7_Ensure_mounting_of_udf_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.7
+      - rule_1_1_1_7
       - udf
 
-- name: "SCORED | 1.1.1.8 | PATCH | Ensure mounting of FAT filesystems is disabled"
+- name: "SCORED | 1_1_1_8 | PATCH | Ensure mounting of FAT filesystems is disabled"
   lineinfile:
-      dest: /etc/modprobe.d/CIS.conf
+      dest: /etc/modprobe_d/CIS_conf
       regexp: "^(#)?install vfat(\\s|$)"
       line: "install vfat /bin/true"
       create: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.8_Ensure_mounting_of_FAT_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_8_Ensure_mounting_of_FAT_filesystems_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.1.8
+      - rule_1_1_1_8
       - vfat
 
-- name: "SCORED | 1.1.1.8 | PATCH | Remove FAT module"
+- name: "SCORED | 1_1_1_8 | PATCH | Remove FAT module"
   modprobe:
     name: vfat
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.1.8_Ensure_mounting_of_FAT_filesystems_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_1_8_Ensure_mounting_of_FAT_filesystems_is_disabled
   tags:
       - level2
       - scored
       - patch
-      - rule_1.1.1.8
+      - rule_1_1_1_8
       - vfat
 
-- name: "SCORED | 1.1.2 | PATCH | Ensure separate partition exists for /tmp | enable and start/restart tmp.mount"
+- name: "SCORED | 1_1_2 | PATCH | Ensure separate partition exists for /tmp | enable and start/restart tmp_mount"
   systemd:
-      name: tmp.mount
+      name: tmp_mount
       daemon_reload: yes
       enabled: yes
       masked: no
       state: started
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.2_Ensure_separate_partition_exists_for_tmp
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_2_Ensure_separate_partition_exists_for_tmp
   tags:
       - level2
       - scored
       - patch
-      - rule_1.1.2
+      - rule_1_1_2
 
-- name: "SCORED | 1.1.3 | PATCH | Ensure nodev option set on /tmp partition\n
-         SCORED | 1.1.4 | PATCH | Ensure nosuid option set on /tmp partition\n
-         SCORED | 1.1.5 | PATCH | Ensure noexec option set on /tmp partition\n
-         | drop custom tmp.mount"
+- name: "SCORED | 1_1_3 | PATCH | Ensure nodev option set on /tmp partition\n
+         SCORED | 1_1_4 | PATCH | Ensure nosuid option set on /tmp partition\n
+         SCORED | 1_1_5 | PATCH | Ensure noexec option set on /tmp partition\n
+         | drop custom tmp_mount"
   copy:
-      src: etc/systemd/system/tmp.mount
-      dest: /etc/systemd/system/tmp.mount
+      src: etc/systemd/system/tmp_mount
+      dest: /etc/systemd/system/tmp_mount
       owner: root
       group: root
       mode: 0644
-  notify: systemd restart tmp.mount
+  notify: systemd restart tmp_mount
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.3_Ensure_nodev_option_set_on_tmp_partition
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.4_Ensure_nosuid_option_set_on_tmp_partition
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.5_Ensure_separate_partition_exists_for_var
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_3_Ensure_nodev_option_set_on_tmp_partition
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_4_Ensure_nosuid_option_set_on_tmp_partition
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_5_Ensure_separate_partition_exists_for_var
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.3
-      - rule_1.1.4
-      - rule_1.1.5
+      - rule_1_1_3
+      - rule_1_1_4
+      - rule_1_1_5
 
-- name: "SCORED | 1.1.6 | PATCH | Ensure separate partition exists for /var"
+- name: "SCORED | 1_1_6 | PATCH | Ensure separate partition exists for /var"
   shell: mount | grep "on /var "
   register: var_mounted
   changed_when: no
   failed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.6_Ensure_separate_partition_exists_for_vartmp
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_6_Ensure_separate_partition_exists_for_vartmp
   tags:
       - level2
       - scored
       - patch
-      - rule_1.1.6
+      - rule_1_1_6
       - skip_ansible_lint
 
-- name: "SCORED | 1.1.7 | PATCH | Ensure separate partition exists for /var/tmp"
+- name: "SCORED | 1_1_7 | PATCH | Ensure separate partition exists for /var/tmp"
   shell: mount | grep "on /var/tmp "
   register: var_tmp_mounted
   changed_when: no
   failed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.7_Ensure_nodev_option_set_on_vartmp_partition
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_7_Ensure_nodev_option_set_on_vartmp_partition
   tags:
       - level2
       - scored
       - patch
-      - rule_1.1.7
+      - rule_1_1_7
       - skip_ansible_lint
 
-- name: "SCORED | 1.1.8  | PATCH | Ensure nodev option set on /var/tmp partition\n
-         SCORED | 1.1.9  | PATCH | Ensure nosuid option set on /var/tmp partition\n
-         SCORED | 1.1.10 | PATCH | Ensure noexec option set on /var/tmp partition"
+- name: "SCORED | 1_1_8  | PATCH | Ensure nodev option set on /var/tmp partition\n
+         SCORED | 1_1_9  | PATCH | Ensure nosuid option set on /var/tmp partition\n
+         SCORED | 1_1_10 | PATCH | Ensure noexec option set on /var/tmp partition"
   mount:
       name: /var/tmp
       src: "{{ rhel7cis_vartmp['source'] }}"
@@ -300,79 +300,79 @@
       opts: "{{ rhel7cis_vartmp['opts'] }}"
   when:
       - rhel7cis_vartmp['enabled'] == 'yes'
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.8_Ensure_nosuid_option_set_on_vartmp_partition
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.9_Ensure_noexec_option_set_on_vartmp_partition
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.10_Ensure_separate_partition_exists_for_varlog
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_8_Ensure_nosuid_option_set_on_vartmp_partition
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_9_Ensure_noexec_option_set_on_vartmp_partition
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_10_Ensure_separate_partition_exists_for_varlog
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.8
-      - rule_1.1.9
-      - rule_1.1.10
+      - rule_1_1_8
+      - rule_1_1_9
+      - rule_1_1_10
 
-- name: "SCORED | 1.1.11 | PATCH | Ensure separate partition exists for /var/log"
+- name: "SCORED | 1_1_11 | PATCH | Ensure separate partition exists for /var/log"
   shell: mount | grep "on /var/log "
   register: var_log_mounted
   changed_when: no
   failed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.11_Ensure_separate_partition_exists_for_varlogaudit
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_11_Ensure_separate_partition_exists_for_varlogaudit
   tags:
       - level2
       - scored
       - patch
-      - rule_1.1.11
+      - rule_1_1_11
       - skip_ansible_lint
 
-- name: "SCORED | 1.1.12 | PATCH | Ensure separate partition exists for /var/log/audit"
+- name: "SCORED | 1_1_12 | PATCH | Ensure separate partition exists for /var/log/audit"
   shell: mount | grep "on /var/log/audit "
   register: var_log_audit_mounted
   changed_when: no
   failed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.12_Ensure_separate_partition_exists_for_home
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_12_Ensure_separate_partition_exists_for_home
   tags:
       - level2
       - scored
       - patch
-      - rule_1.1.12
+      - rule_1_1_12
       - skip_ansible_lint
 
-- name: "SCORED | 1.1.13 | PATCH | Ensure separate partition exists for /home"
+- name: "SCORED | 1_1_13 | PATCH | Ensure separate partition exists for /home"
   shell: mount | grep "on /home"
   register: home_mounted
   changed_when: no
   failed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.13_Ensure_nodev_option_set_on_home_partition
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_13_Ensure_nodev_option_set_on_home_partition
   tags:
       - level2
       - scored
       - patch
-      - rule_1.1.13
+      - rule_1_1_13
       - skip_ansible_lint
 
-- name: "SCORED | 1.1.14 | PATCH | Ensure nodev option set on /home partition"
+- name: "SCORED | 1_1_14 | PATCH | Ensure nodev option set on /home partition"
   mount:
     name: "/home"
-    src: "{{ item.device }}"
+    src: "{{ item_device }}"
     state: mounted
-    fstype: "{{ item.fstype }}"
+    fstype: "{{ item_fstype }}"
     opts: "nodev"
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.14_Ensure_nodev_option_set_on_devshm_partitiov
-      - item.mount == "/home"
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_14_Ensure_nodev_option_set_on_devshm_partitiov
+      - item_mount == "/home"
   with_items: "{{ ansible_mounts }}"
   tags:
       - level1
       - level2
       - patch
-      - rule_1.1.14
+      - rule_1_1_14
 
-- name: "SCORED | 1.1.15 | PATCH | Ensure nodev option set on /dev/shm partition\n
-         SCORED | 1.1.16 | PATCH | Ensure nosuid option set on /dev/shm partition\n
-         SCORED | 1.1.17 | PATCH | Ensure noexec option set on /dev/shm partition"
+- name: "SCORED | 1_1_15 | PATCH | Ensure nodev option set on /dev/shm partition\n
+         SCORED | 1_1_16 | PATCH | Ensure nosuid option set on /dev/shm partition\n
+         SCORED | 1_1_17 | PATCH | Ensure noexec option set on /dev/shm partition"
   mount:
       name: /dev/shm
       src: tmpfs
@@ -380,135 +380,135 @@
       fstype: tmpfs
       opts: "defaults,nodev,nosuid,noexec"
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.15_Ensure_nosuid_option_set_on_devshm_partitionrun
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.16_Ensure_noexec_option_set_on_devshm_partition
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.17_Ensure_nodev_option_set_on_removable_media_partitions
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_15_Ensure_nosuid_option_set_on_devshm_partitionrun
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_16_Ensure_noexec_option_set_on_devshm_partition
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_17_Ensure_nodev_option_set_on_removable_media_partitions
   tags:
       - level1
       - scored
       - patch
-      - rule_1.1.15
-      - rule_1.1.16
-      - rule_1.1.17
+      - rule_1_1_15
+      - rule_1_1_16
+      - rule_1_1_17
 
-- name: "NOTSCORED | 1.1.18 | PATCH | Ensure nodev option set on removable media partitions"
+- name: "NOTSCORED | 1_1_18 | PATCH | Ensure nodev option set on removable media partitions"
   debug:
       msg: "--> Not relevant"
   changed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.18_Ensure_nosuid_option_set_on_removable_media_partitions
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_18_Ensure_nosuid_option_set_on_removable_media_partitions
   tags:
       - level1
       - notscored
       - patch
-      - rule_1.1.18
+      - rule_1_1_18
 
-- name: "NOTSCORED | 1.1.19 | PATCH | Ensure nosuid option set on removable media partitions"
+- name: "NOTSCORED | 1_1_19 | PATCH | Ensure nosuid option set on removable media partitions"
   debug:
       msg: "--> Not relevant"
   changed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.19_Ensure_noexec_option_set_on_removable_media_partitions
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_19_Ensure_noexec_option_set_on_removable_media_partitions
   tags:
       - level1
       - notscored
       - patch
-      - rule_1.1.19
+      - rule_1_1_19
 
-- name: "NOTSCORED | 1.1.20 | PATCH | Ensure noexec option set on removable media partitions"
+- name: "NOTSCORED | 1_1_20 | PATCH | Ensure noexec option set on removable media partitions"
   debug:
       msg: "--> Not relevant"
   changed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.20_Ensure_sticky_bit_is_set_on_all_world-writable_directories
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_20_Ensure_sticky_bit_is_set_on_all_world-writable_directories
   tags:
       - level1
       - notscored
       - patch
-      - rule_1.1.20
+      - rule_1_1_20
 
-- name: "SCORED | 1.1.21 | PATCH | Ensure sticky bit is set on all world-writable directories"
+- name: "SCORED | 1_1_21 | PATCH | Ensure sticky bit is set on all world-writable directories"
   shell: df --local -P | awk {'if (NR!=1) print $6'} | xargs -I '{}' find '{}' -xdev -type d -perm -0002 2>/dev/null | xargs chmod a+t
   changed_when: no
   failed_when: no
-  #when: sticky_bit_on_worldwritable_dirs_audit.rc == '0'
+  #when: sticky_bit_on_worldwritable_dirs_audit_rc == '0'
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.1.21_Disable_Automounting
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_1_21_Disable_Automounting
   tags:
       - level1
       - level2
       - patch
-      - rule_1.1.21
+      - rule_1_1_21
 
-- name: "SCORED | 1.1.22 | PATCH | Disable Automounting"
+- name: "SCORED | 1_1_22 | PATCH | Disable Automounting"
   service:
       name: autofs
       enabled: no
   when:
-      - rhel7cis_allow_autofs == false and autofs_service_status.stdout == "loaded"
+      - rhel7cis_allow_autofs == false and autofs_service_status_stdout == "loaded"
       - rhel7cis_rule_1_1_22
   tags:
       - level1
       - patch
-      - rule_1.1.22
+      - rule_1_1_22
 
-- name: "NOTSCORED | 1.2.1 | PATCH | Ensure package manager repositories are configured"
+- name: "NOTSCORED | 1_2_1 | PATCH | Ensure package manager repositories are configured"
   command: yum check-update
   register: yum_configured
   changed_when: no
   failed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.2.1_Ensure_package_manager_repositories_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_2_1_Ensure_package_manager_repositories_are_configured
   tags:
       - level1
       - notscored
       - patch
-      - rule_1.2.1
+      - rule_1_2_1
       - skip_ansible_lint
 
-- name: "SCORED | 1.2.2 | PATCH | Ensure gpgcheck is globally activated"
+- name: "SCORED | 1_2_2 | PATCH | Ensure gpgcheck is globally activated"
   replace:
-      name: /etc/yum.conf
+      name: /etc/yum_conf
       regexp: "^gpgcheck=0"
       replace: "gpgcheck=1"
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.2.2_Ensure_GPG_keys_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_2_2_Ensure_GPG_keys_are_configured
   tags:
       - level1
       - scored
       - patch
-      - rule_1.2.2
+      - rule_1_2_2
 
-- name: "SCORED | 1.2.2 | PATCH | Ensure gpgcheck is globally activated"
+- name: "SCORED | 1_2_2 | PATCH | Ensure gpgcheck is globally activated"
   find:
-      paths: /etc/yum.repos.d
-      patterns: "*.repo"
+      paths: /etc/yum_repos_d
+      patterns: "*_repo"
   register: yum_repos
   changed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.2.2_Ensure_GPG_keys_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_2_2_Ensure_GPG_keys_are_configured
   tags:
       - level1
       - scored
       - patch
-      - rule_1.2.2
+      - rule_1_2_2
 
-- name: "SCORED | 1.2.2 | PATCH | Ensure gpgcheck is globally activated"
+- name: "SCORED | 1_2_2 | PATCH | Ensure gpgcheck is globally activated"
   replace:
-      name: "{{ item.path }}"
+      name: "{{ item_path }}"
       regexp: "^gpgcheck=0"
       replace: "gpgcheck=1"
   with_items:
-      - "{{ yum_repos.files }}"
+      - "{{ yum_repos_files }}"
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.2.2_Ensure_GPG_keys_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_2_2_Ensure_GPG_keys_are_configured
   tags:
       - level1
       - scored
       - patch
-      - rule_1.2.2
+      - rule_1_2_2
 
-- name: "NOTSCORED | 1.2.3 | PATCH | Ensure GPG keys are configured"
+- name: "NOTSCORED | 1_2_3 | PATCH | Ensure GPG keys are configured"
   command: gpg --quiet --with-fingerprint /etc/pki/rpm-gpg/RPM-GPG-KEY-{{ ansible_distribution|lower }}-release
   when:
       - rhel7cis_rule_1_2_3
@@ -517,9 +517,9 @@
       - level1
       - notscored
       - patch
-      - rule_1.2.3
+      - rule_1_2_3
 
-- name: "NOTSCORED | 1.2.4 | PATCH | Ensure Red Hat Network or Subscription Manager connection is configured"
+- name: "NOTSCORED | 1_2_4 | PATCH | Ensure Red Hat Network or Subscription Manager connection is configured"
   command: subscription-manager identity
   changed_when: no
   failed_when: no
@@ -530,54 +530,54 @@
       - level1
       - notscored
       - patch
-      - rule_1.2.4
+      - rule_1_2_4
 
-- name: "NOTSCORED | 1.2.5 | PATCH | Disable the rhnsd Daemon"
+- name: "NOTSCORED | 1_2_5 | PATCH | Disable the rhnsd Daemon"
   service:
       name: rhnsd
       state: stopped
       enabled: no
   when:
-      - ansible_distribution == "RedHat" and rhnsd_service_status.stdout == "loaded" and not rhel7cis_rhnsd_required
+      - ansible_distribution == "RedHat" and rhnsd_service_status_stdout == "loaded" and not rhel7cis_rhnsd_required
       - rhel7cis_rule_1_2_5
   tags:
       - level2
       - notscored
       - patch
-      - rule_1.2.5
+      - rule_1_2_5
 
-- name: "SCORED | 1.3.1 | PATCH | Ensure AIDE is installed"
+- name: "SCORED | 1_3_1 | PATCH | Ensure AIDE is installed"
   yum:
       name: aide
       state: present
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.3.1_Ensure_AIDE_is_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_3_1_Ensure_AIDE_is_installed
   tags:
       - level1
       - scored
       - aide
       - patch
-      - rule_1.3.1
+      - rule_1_3_1
 
-- name: "SCORED | 1.3.1 | PATCH | Ensure AIDE is installed"
-  command: /usr/sbin/aide --init -B 'database_out=file:/var/lib/aide/aide.db.gz'
+- name: "SCORED | 1_3_1 | PATCH | Ensure AIDE is installed"
+  command: /usr/sbin/aide --init -B 'database_out=file:/var/lib/aide/aide_db_gz'
   args:
-      creates: /var/lib/aide/aide.db.gz
+      creates: /var/lib/aide/aide_db_gz
   changed_when: no
   failed_when: no
   async: 45
   poll: 0
   when:
       - rhel7cis_config_aide
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.3.1_Ensure_AIDE_is_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_3_1_Ensure_AIDE_is_installed
   tags:
       - level1
       - scored
       - aide
       - patch
-      - rule_1.3.1
+      - rule_1_3_1
 
-- name: "SCORED | 1.3.2 | PATCH | Ensure filesystem integrity is regularly checked"
+- name: "SCORED | 1_3_2 | PATCH | Ensure filesystem integrity is regularly checked"
   cron:
       name: Run AIDE integrity check weekly
       cron_file: "{{ rhel7cis_aide_cron['cron_file'] }}"
@@ -589,186 +589,186 @@
       weekday: "{{ rhel7cis_aide_cron['aide_weekday'] | default('*') }}"
       job: "{{ rhel7cis_aide_cron['aide_job'] }}"
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.3.2_Ensure_filesystem_integrity_is_regularly_checked
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_3_2_Ensure_filesystem_integrity_is_regularly_checked
   tags:
       - level1
       - scored
       - aide
       - file_integrity
       - patch
-      - rule_1.3.2
+      - rule_1_3_2
 
-- name: "SCORED | 1.4.1 | PATCH | Ensure permissions on bootloader config are configured"
+- name: "SCORED | 1_4_1 | PATCH | Ensure permissions on bootloader config are configured"
   stat:
-      path: /etc/grub2.cfg
+      path: /etc/grub2_cfg
   register: grub_cfg
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.1_Ensure_permissions_on_bootloader_config_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_1_Ensure_permissions_on_bootloader_config_are_configured
   tags:
       - level1
       - scored
       - grub
       - patch
-      - rule_1.4.1
+      - rule_1_4_1
 
-- name: "SCORED | 1.4.1 | PATCH | Ensure permissions on bootloader config are configured"
+- name: "SCORED | 1_4_1 | PATCH | Ensure permissions on bootloader config are configured"
   file:
-      path: "{{ grub_cfg.stat.lnk_source }}"
+      path: "{{ grub_cfg_stat_lnk_source }}"
       owner: root
       group: root
       mode: 0600
   when:
-      - grub_cfg.stat.exists and grub_cfg.stat.islnk
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.1_Ensure_permissions_on_bootloader_config_are_configured
+      - grub_cfg_stat_exists and grub_cfg_stat_islnk
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_1_Ensure_permissions_on_bootloader_config_are_configured
   tags:
       - level1
       - scored
       - grub
       - patch
-      - rule_1.4.1
+      - rule_1_4_1
 
-- name: "SCORED | 1.4.2 | PATCH | Ensure bootloader password is set"
+- name: "SCORED | 1_4_2 | PATCH | Ensure bootloader password is set"
   grub_crypt:
       password: "{{ rhel7cis_bootloader_password }}"
   register: grub_pass
   when:
       - rhel7cis_set_boot_pass
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.2_Ensure_bootloader_password_is_set
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_2_Ensure_bootloader_password_is_set
   tags:
       - level1
       - scored
       - grub
       - patch
-      - rule_1.4.2
+      - rule_1_4_2
 
-- name: "SCORED | 1.4.2 | PATCH | Ensure bootloader password is set"
+- name: "SCORED | 1_4_2 | PATCH | Ensure bootloader password is set"
   copy:
-      dest: /boot/grub2/user.cfg
-      content: "GRUB2_PASSWORD={{ grub_pass.passhash }}"
+      dest: /boot/grub2/user_cfg
+      content: "GRUB2_PASSWORD={{ grub_pass_passhash }}"
   notify: generate new grub config
   when:
-      - rhel7cis_set_boot_pass and grub_pass is defined and grub_pass.passhash is defined and grub_pass.passhash != ''
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.2_Ensure_bootloader_password_is_set
+      - rhel7cis_set_boot_pass and grub_pass is defined and grub_pass_passhash is defined and grub_pass_passhash != ''
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_2_Ensure_bootloader_password_is_set
   tags:
       - level1
       - scored
       - grub
       - patch
-      - rule_1.4.2
+      - rule_1_4_2
 
-- name: "NOTSCORED | 1.4.3 | PATCH | Ensure authentication required for single user mode"
+- name: "NOTSCORED | 1_4_3 | PATCH | Ensure authentication required for single user mode"
   block:
-      - name: "NOTSCORED | 1.4.3 | PATCH | Ensure authentication required for single user mode - Emergency"
+      - name: "NOTSCORED | 1_4_3 | PATCH | Ensure authentication required for single user mode - Emergency"
         lineinfile:
-          dest: /usr/lib/systemd/system/emergency.service
+          dest: /usr/lib/systemd/system/emergency_service
           regexp: '/sbin/sulogin'
           line: 'ExecStart=-/bin/sh -c \"/usr/sbin/sulogin; /usr/bin/systemctl --fail --no-block default\"'
         when:
-          - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.3_Ensure_authentication_required_for_single_user_mode
+          - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_3_Ensure_authentication_required_for_single_user_mode
           - ansible_distribution_major_version == 7
         tags:
           - level1
           - level2
           - patch
-          - rule_1.4.3
-      - name: "NOTSCORED | 1.4.3 | PATCH | Ensure authentication required for single user mode - Rescue"
+          - rule_1_4_3
+      - name: "NOTSCORED | 1_4_3 | PATCH | Ensure authentication required for single user mode - Rescue"
         lineinfile:
-          dest: /usr/lib/systemd/system/rescue.service
+          dest: /usr/lib/systemd/system/rescue_service
           regexp: '/sbin/sulogin'
           line: 'ExecStart=-/bin/sh -c \"/usr/sbin/sulogin; /usr/bin/systemctl --fail --no-block default\"'
         when:
-          - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.4.3_Ensure_authentication_required_for_single_user_mode
+          - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_3_Ensure_authentication_required_for_single_user_mode
           - ansible_distribution_major_version == 7
         tags:
           - level1
           - level2
           - patch
-          - rule_1.4.3
+          - rule_1_4_3
 
-- name: "SCORED | 1.5.1 | PATCH | Ensure core dumps are restricted"
+- name: "SCORED | 1_5_1 | PATCH | Ensure core dumps are restricted"
   lineinfile:
       state: present
-      dest: /etc/security/limits.conf
-      regexp: '^#?\\*.*core'
+      dest: /etc/security/limits_conf
+      regexp: '^#?\\*_*core'
       line: '*                hard    core            0'
       insertbefore: '^# End of file'
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.1_Ensure_core_dumps_are_restricted
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_5_1_Ensure_core_dumps_are_restricted
   tags:
       - level1
       - scored
       - limits
       - patch
-      - rule_1.5.1
+      - rule_1_5_1
 
-- name: "SCORED | 1.5.1 | PATCH | Ensure core dumps are restricted"
+- name: "SCORED | 1_5_1 | PATCH | Ensure core dumps are restricted"
   sysctl:
-      name: fs.suid_dumpable
+      name: fs_suid_dumpable
       value: 0
       state: present
       reload: yes
       sysctl_set: yes
       ignoreerrors: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.1_Ensure_core_dumps_are_restricted
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_5_1_Ensure_core_dumps_are_restricted
   tags:
       - level1
       - scored
       - sysctl
       - patch
-      - rule_1.5.1
+      - rule_1_5_1
 
-- name: "NOTSCORED | 1.5.2 | PATCH | Ensure XD/NX support is enabled"
+- name: "NOTSCORED | 1_5_2 | PATCH | Ensure XD/NX support is enabled"
   shell: dmesg|grep -E "NX|XD" | grep " active"
   changed_when: no
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.2_Ensure_XDNX_support_is_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_5_2_Ensure_XDNX_support_is_enabled
   tags:
       - level1
       - level2
       - patch
-      - rule_1.5.2
+      - rule_1_5_2
 
-- name: "SCORED | 1.5.3 | PATCH | Ensure address space layout randomization (ASLR) is enabled"
+- name: "SCORED | 1_5_3 | PATCH | Ensure address space layout randomization (ASLR) is enabled"
   sysctl:
-      name: kernel.randomize_va_space
+      name: kernel_randomize_va_space
       value: 2
       state: present
       reload: yes
       sysctl_set: yes
       ignoreerrors: yes
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.3_Ensure_address_space_layout_randomization_ASLR_is_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_5_3_Ensure_address_space_layout_randomization_ASLR_is_enabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.5.3
+      - rule_1_5_3
 
-- name: "SCORED | 1.5.4 | PATCH | Ensure prelink is disabled"
+- name: "SCORED | 1_5_4 | PATCH | Ensure prelink is disabled"
   command: prelink -ua
   when:
-      - prelink_installed.rc == 0
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.4_Ensure_prelink_is_disabled
+      - prelink_installed_rc == 0
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_5_4_Ensure_prelink_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.5.4
+      - rule_1_5_4
 
-- name: "SCORED | 1.5.4 | PATCH | Ensure prelink is disabled"
+- name: "SCORED | 1_5_4 | PATCH | Ensure prelink is disabled"
   yum:
     name: prelink
     state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.5.4_Ensure_prelink_is_disabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_5_4_Ensure_prelink_is_disabled
   tags:
       - level1
       - scored
       - patch
-      - rule_1.5.4
+      - rule_1_5_4
 
-- name: "SCORED | 1.6.1.1 | PATCH | Ensure SELinux is not disabled in bootloader configuration"
+- name: "SCORED | 1_6_1_1 | PATCH | Ensure SELinux is not disabled in bootloader configuration"
   replace:
       dest: /etc/default/grub
       regexp: '(selinux|enforcing)\s*=\s*0\s*'
@@ -777,57 +777,57 @@
   ignore_errors: yes
   notify: generate new grub config
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.6.1.1_Ensure_SELinux_is_not_disabled_in_bootloader_configuration
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_6_1_1_Ensure_SELinux_is_not_disabled_in_bootloader_configuration
   tags:
       - level2
       - scored
       - patch
-      - rule_1.6.1.1
+      - rule_1_6_1_1
 
-- name: "SCORED | 1.6.1.2 | PATCH | Ensure the SELinux state is enforcing"
+- name: "SCORED | 1_6_1_2 | PATCH | Ensure the SELinux state is enforcing"
   selinux:
       conf: /etc/selinux/config
       policy: "{{ rhel7cis_selinux_pol }}"
       state: enforcing
   when:
       - not rhel7cis_selinux_disable
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.6.1.2_Ensure_the_SELinux_state_is_enforcing
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_6_1_2_Ensure_the_SELinux_state_is_enforcing
   tags:
       - level2
       - scored
       - selinux
       - patch
-      - rule_1.6.1.2
+      - rule_1_6_1_2
 
-- name: "SCORED | 1.6.1.3 | PATCH | Ensure SELinux policy is configured"
+- name: "SCORED | 1_6_1_3 | PATCH | Ensure SELinux policy is configured"
   selinux:
       conf: /etc/selinux/config
       policy: "{{ rhel7cis_selinux_pol }}"
       state: enforcing
   when:
       - not rhel7cis_selinux_disable
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.6.1.3_Ensure_SELinux_policy_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_6_1_3_Ensure_SELinux_policy_is_configured
   tags:
       - level2
       - scored
       - selinux
       - patch
-      - rule_1.6.1.3
+      - rule_1_6_1_3
 
-- name: "SCORED | 1.6.1.4 | PATCH | Ensure SETroubleshoot is not installed"
+- name: "SCORED | 1_6_1_4 | PATCH | Ensure SETroubleshoot is not installed"
   yum:
       name: setroubleshoot
       state: absent
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.6.1.4_Ensure_no_unconfined_daemons_exist
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_6_1_4_Ensure_no_unconfined_daemons_exist
   tags:
       - level2
       - scored
       - selinux
       - patch
-      - rule_1.6.1.4
+      - rule_1_6_1_4
 
-- name: "SCORED | 1.6.1.5 | PATCH | Ensure the MCS Translation Service (mcstrans) is not installed"
+- name: "SCORED | 1_6_1_5 | PATCH | Ensure the MCS Translation Service (mcstrans) is not installed"
   yum:
       name: mcstrans
       state: absent
@@ -837,9 +837,9 @@
       - level2
       - scored
       - patch
-      - rule_1.6.1.5
+      - rule_1_6_1_5
 
-- name: "SCORED | 1.6.2 | PATCH | Ensure SELinux is installed"
+- name: "SCORED | 1_6_2 | PATCH | Ensure SELinux is installed"
   yum:
       name: libselinux
       state: present
@@ -849,44 +849,44 @@
       - level2
       - scored
       - patch
-      - rule_1.6.2
+      - rule_1_6_2
 
-- name: "SCORED | 1.7.1.1 | PATCH | Ensure message of the day is configured properly"
+- name: "SCORED | 1_7_1_1 | PATCH | Ensure message of the day is configured properly"
   template:
-      src: etc/motd.j2
+      src: etc/motd_j2
       dest: /etc/motd
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.1_Ensure_message_of_the_day_is_configured_properly
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_7_1_1_Ensure_message_of_the_day_is_configured_properly
   tags:
       - level1
       - banner
       - patch
-      - rule_1.7.1.1
+      - rule_1_7_1_1
 
-- name: "NOTSCORED | 1.7.1.2 | PATCH | Ensure local login warning banner is configured properly"
+- name: "NOTSCORED | 1_7_1_2 | PATCH | Ensure local login warning banner is configured properly"
   template:
-      src: etc/issue.j2
+      src: etc/issue_j2
       dest: /etc/issue
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.2_Ensure_local_login_warning_banner_is_configured_properly
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_7_1_2_Ensure_local_login_warning_banner_is_configured_properly
   tags:
       - level1
       - patch
-      - rule_1.7.1.2
+      - rule_1_7_1_2
 
-- name: "NOTSCORED | 1.7.1.3 | PATCH | Ensure remote login warning banner is configured properly"
+- name: "NOTSCORED | 1_7_1_3 | PATCH | Ensure remote login warning banner is configured properly"
   template:
-      src: etc/issue.net.j2
-      dest: /etc/issue.net
+      src: etc/issue_net_j2
+      dest: /etc/issue_net
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.3_Ensure_remote_login_warning_banner_is_configured_properly
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_7_1_3_Ensure_remote_login_warning_banner_is_configured_properly
   tags:
       - level1
       - banner
       - patch
-      - rule_1.7.1.3
+      - rule_1_7_1_3
 
-- name: "NOTSCORED | 1.7.1.4 | PATCH | Ensure permissions on /etc/motd are configured"
+- name: "NOTSCORED | 1_7_1_4 | PATCH | Ensure permissions on /etc/motd are configured"
   file:
       dest: /etc/motd
       state: file
@@ -894,14 +894,14 @@
       group: root
       mode: 0644
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.4_Ensure_permissions_on_etcmotd_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_7_1_4_Ensure_permissions_on_etcmotd_are_configured
   tags:
       - level1
       - perms
       - patch
-      - rule_1.7.1.4
+      - rule_1_7_1_4
 
-- name: "SCORED | 1.7.1.5 | PATCH | Ensure permissions on /etc/issue are configured"
+- name: "SCORED | 1_7_1_5 | PATCH | Ensure permissions on /etc/issue are configured"
   file:
       dest: /etc/issue
       state: file
@@ -909,33 +909,33 @@
       group: root
       mode: 0644
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.5_Ensure_permissions_on_etcissue_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_7_1_5_Ensure_permissions_on_etcissue_are_configured
   tags:
       - level1
       - perms
       - patch
-      - rule_1.7.1.5
+      - rule_1_7_1_5
 
-- name: "NOTSCORED | 1.7.1.6 | PATCH | Ensure permissions on /etc/issue.net are configured"
+- name: "NOTSCORED | 1_7_1_6 | PATCH | Ensure permissions on /etc/issue_net are configured"
   file:
-      dest: /etc/issue.net
+      dest: /etc/issue_net
       state: file
       owner: root
       group: root
       mode: 0644
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.1.6_Ensure_permissions_on_etcissue.net_are_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_7_1_6_Ensure_permissions_on_etcissue_net_are_configured
   tags:
       - level1
       - perms
       - patch
-      - rule_1.7.1.6
+      - rule_1_7_1_6
 
-- name: "SCORED | 1.7.2 | PATCH | Ensure GDM login banner is configured"
+- name: "SCORED | 1_7_2 | PATCH | Ensure GDM login banner is configured"
   lineinfile:
-      dest: "{{ item.file }}"
-      regexp: "{{ item.regexp }}"
-      line: "{{ item.line }}"
+      dest: "{{ item_file }}"
+      regexp: "{{ item_regexp }}"
+      line: "{{ item_line }}"
       state: present
       create: yes
       owner: root
@@ -945,28 +945,29 @@
       - { file: '/etc/dconf/profile/gdm', regexp:  'user-db', line: 'user-db:user' }
       - { file: '/etc/dconf/profile/gdm', regexp:  'system-db', line: 'system-db:gdm' }
       - { file: '/etc/dconf/profile/gdm', regexp:  'file-db', line: 'file-db:/usr/share/gdm/greeter-dconf-defaults' }
-      - { file: '/etc/dconf/db/gdm.d/01-banner-message', regexp:  '\[org\/gnome\/login-screen\]', line: '[org/gnome/login-screen]' }
-      - { file: '/etc/dconf/db/gdm.d/01-banner-message', regexp:  'banner-message-enable', line: 'banner-message-enable=true' }
-      - { file: '/etc/dconf/db/gdm.d/01-banner-message', regexp:  'banner-message-text', line: "banner-message-text='{{ rhel7cis_warning_banner }}' " }
+      - { file: '/etc/dconf/db/gdm_d/01-banner-message', regexp:  '\[org\/gnome\/login-screen\]', line: '[org/gnome/login-screen]' }
+      - { file: '/etc/dconf/db/gdm_d/01-banner-message', regexp:  'banner-message-enable', line: 'banner-message-enable=true' }
+      - { file: '/etc/dconf/db/gdm_d/01-banner-message', regexp:  'banner-message-text', line: "banner-message-text='{{ rhel7cis_warning_banner }}' " }
   when:
       - rhel7cis_gui
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.7.2_Ensure_GDM_login_banner_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_7_2_Ensure_GDM_login_banner_is_configured
   tags:
       - level1
       - level2
       - patch
-      - rule_1.7.2
+      - rule_1_7_2
 
-- name: "NOTSCORED | 1.8 | PATCH | Ensure updates, patches, and additional security software are installed"
+- name: "NOTSCORED | 1_8 | PATCH | Ensure updates, patches, and additional security software are installed"
   yum:
       name: "*"
       state: latest
   when:
-      - root.CISPP_xccdf_org.cisecurity.benchmarks_rule_1.8_Ensure_updates_patches_and_additional_security_software_are_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_8_Ensure_updates_patches_and_additional_security_software_are_installed
   tags:
       - level1
       - level2
       - patch
-      - rule_1.8
+      - rule_1_8
       - skip_ansible_lint
+
 
