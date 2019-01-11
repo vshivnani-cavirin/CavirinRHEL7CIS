@@ -14,7 +14,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_1_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_1_1_Ensure_IP_forwarding_is_disabled
 
 - name: "SCORED | 3_1_2 | PATCH | Ensure packet redirect sending is disabled"
   sysctl:
@@ -36,7 +36,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_1_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_1_2_Ensure_packet_redirect_sending_is_disabled
 
 - name: "SCORED | 3_2_1 | PATCH | Ensure source routed packets are not accepted"
   sysctl:
@@ -57,7 +57,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_2_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_1_Ensure_source_routed_packets_are_not_accepted
 
 - name: "SCORED | 3_2_2 | PATCH | Ensure ICMP redirects are not accepted"
   sysctl:
@@ -78,7 +78,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_2_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_2_Ensure_ICMP_redirects_are_not_accepted
 
 - name: "SCORED | 3_2_3 | PATCH | Ensure secure ICMP redirects are not accepted"
   sysctl:
@@ -99,7 +99,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_2_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_3_Ensure_secure_ICMP_redirects_are_not_accepted
 
 - name: "SCORED | 3_2_4 | PATCH | Ensure suspicious packets are logged"
   sysctl:
@@ -120,7 +120,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_2_4
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_4_Ensure_suspicious_packets_are_logged
 
 - name: "SCORED | 3_2_5 | PATCH | Ensure broadcast ICMP requests are ignored"
   sysctl:
@@ -137,7 +137,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_2_5
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_5_Ensure_broadcast_ICMP_requests_are_ignored
 
 - name: "SCORED | 3_2_6 | PATCH | Ensure bogus ICMP responses are ignored"
   sysctl:
@@ -154,7 +154,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_2_6
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_6_Ensure_bogus_ICMP_responses_are_ignored
 
 - name: "SCORED | 3_2_7 | PATCH | Ensure Reverse Path Filtering is enabled"
   sysctl:
@@ -175,7 +175,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_2_7
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_7_Ensure_Reverse_Path_Filtering_is_enabled
 
 - name: "SCORED | 3_2_8 | PATCH | Ensure TCP SYN Cookies is enabled"
   sysctl:
@@ -192,7 +192,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_2_8
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_2_8_Ensure_TCP_SYN_Cookies_is_enabled
 
 - name: "SCORED | 3_3_1 | PATCH | Ensure IPv6 router advertisements are not accepted"
   sysctl:
@@ -214,7 +214,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_3_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_3_1_Ensure_IPv6_router_advertisements_are_not_accepted
 
 - name: "SCORED | 3_3_2 | PATCH | Ensure IPv6 redirects are not accepted"
   sysctl:
@@ -236,7 +236,7 @@
       - level1
       - sysctl
       - patch
-      - rule_3_3_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_3_2_Ensure_IPv6_redirects_are_not_accepted
 
 - name: "NOTSCORED | 3_3_3 | PATCH | Ensure IPv6 is disabled"
   lineinfile:
@@ -250,7 +250,7 @@
   tags:
       - level1
       - patch
-      - rule_3_3_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_3_3_Ensure_IPv6_is_disabled
 
 - name: "SCORED | 3_4_1 | PATCH | Ensure TCP Wrappers is installed"
   yum:
@@ -261,7 +261,7 @@
   tags:
       - level1
       - patch
-      - rule_3_4_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_1_Ensure_TCP_Wrappers_is_installed
 
 - name: "SCORED | 3_4_2 | PATCH | Ensure /etc/hosts_allow is configured"
   template:
@@ -275,7 +275,7 @@
   tags:
       - level1
       - patch
-      - rule_3_4_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_2_Ensure_etchosts_allow_is_configured
 
 - name: "SCORED | 3_4_3 | PATCH | Ensure /etc/hosts_deny is configured"
   lineinfile:
@@ -287,7 +287,7 @@
   tags:
       - level1
       - patch
-      - rule_3_4_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_3_Ensure_etchosts_deny_is_configured
 
 - name: "SCORED | 3_4_4 | PATCH | Ensure permissions on /etc/hosts_allow are configured"
   file:
@@ -300,7 +300,7 @@
   tags:
       - level1
       - patch
-      - rule_3_4_4
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_4_Ensure_permissions_on_etchosts_allow_are_configured
 
 - name: "SCORED | 3_4_5 | PATCH | Ensure permissions on /etc/hosts_deny are 644"
   file:
@@ -313,7 +313,7 @@
   tags:
       - level1
       - patch
-      - rule_3_4_5
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_4_5_Ensure_permissions_on_etchosts_deny_are_644
 
 - name: "NOTSCORED | 3_5_1 | PATCH | Ensure DCCP is disabled"
   lineinfile:
@@ -326,7 +326,7 @@
   tags:
       - level1
       - patch
-      - rule_3_5_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_5_1_Ensure_DCCP_is_disabled
 
 - name: "NOTSCORED | 3_5_2 | PATCH | Ensure SCTP is disabled"
   lineinfile:
@@ -339,7 +339,7 @@
   tags:
       - level1
       - patch
-      - rule_3_5_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_5_2_Ensure_SCTP_is_disabled
 
 - name: "NOTSCORED | 3_5_3 | PATCH | Ensure RDS is disabled"
   lineinfile:
@@ -352,7 +352,7 @@
   tags:
       - level1
       - patch
-      - rule_3_5_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_5_3_Ensure_RDS_is_disabled
 
 - name: "NOTSCORED | 3_5_4 | PATCH | Ensure TIPC is disabled"
   lineinfile:
@@ -365,7 +365,7 @@
   tags:
       - level1
       - patch
-      - rule_3_5_4
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_5_4_Ensure_TIPC_is_disabled
 
 - name: "SCORED | 3_6 | PATCH | Ensure firewalld is installed and started | CUSTOM"
   yum:
@@ -398,7 +398,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_1_Ensure_iptables_is_installed
 
 - name: "SCORED | 3_6_1 | PATCH | Ensure iptables is installed and started"
   service:
@@ -411,7 +411,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_1_Ensure_iptables_is_installed
 
 - name: "SCORED | 3_6_2 | PATCH | Ensure default deny firewall policy"
   lineinfile:
@@ -424,7 +424,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_2_Ensure_default_deny_firewall_policy
 
 - name: "SCORED | 3_6_2 | PATCH | Ensure default deny firewall policy"
   firewalld:
@@ -437,7 +437,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_2_Ensure_default_deny_firewall_policy
 
 - name: "SCORED | 3_6_2 | PATCH | Ensure default deny firewall policy"
   command: /bin/true
@@ -448,7 +448,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_2_Ensure_default_deny_firewall_policy
       - notimplemented
 
 - name: "SCORED | 3_6_3 | PATCH | Ensure loopback traffic is configured"
@@ -460,7 +460,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_3_Ensure_loopback_traffic_is_configured
       - notimplemented
 
 - name: "NOTSCORED | 3_6_4 | PATCH | Ensure outbound and established connections are configured"
@@ -472,7 +472,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_4
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_4_Ensure_outbound_and_established_connections_are_configured
       - notimplemented
 
 - name: "SCORED | 3_6_5 | PATCH | Ensure firewall rules exist for all open ports"
@@ -490,7 +490,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_5
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_5_Ensure_firewall_rules_exist_for_all_open_ports
 
 - name: "SCORED | 3_6_5 | PATCH | Ensure firewall rules exist for all open ports"
   command: /bin/true
@@ -501,7 +501,7 @@
   tags:
       - level1
       - patch
-      - rule_3_6_5
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_6_5_Ensure_firewall_rules_exist_for_all_open_ports
       - notimplemented
 
 - name: "NOTSCORED | 3_7 | PATCH | Ensure wireless interfaces are disabled"
@@ -511,5 +511,5 @@
       - level1
       - level2
       - patch
-      - rule_3_7
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_3_7_Ensure_wireless_interfaces_are_disabled
 

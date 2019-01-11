@@ -11,7 +11,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_1_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_1_1_Ensure_audit_log_storage_size_is_configured
 
 - name: "SCORED | 4_1_1_2 | PATCH | Ensure system is disabled when audit logs are full"
   lineinfile:
@@ -26,7 +26,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_1_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_1_2_Ensure_system_is_disabled_when_audit_logs_are_full
 
 - name: "SCORED | 4_1_1_2 | PATCH | Ensure email on non-admin audit space alert"
   lineinfile:
@@ -41,7 +41,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_1_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_1_2_Ensure_system_is_disabled_when_audit_logs_are_full
 
 - name: "SCORED | 4_1_1_3 | PATCH | Ensure audit logs are not automatically deleted"
   lineinfile:
@@ -56,7 +56,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_1_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_1_3_Ensure_audit_logs_are_not_automatically_deleted
 
 - name: "SCORED | 4_1_2 | PATCH | Ensure auditd service is enabled"
   service:
@@ -70,7 +70,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_2_Ensure_auditd_service_is_enabled
 
 - name: "SCORED | 4_1_3 | PATCH | Ensure auditing for processes that start prior to auditd is enabled"
   replace:
@@ -86,7 +86,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_3_Ensure_auditing_for_processes_that_start_prior_to_auditd_is_enabled
 
 - name: "SCORED | 4_1_4 | PATCH | Ensure events that modify date and time information are collected"
   template:
@@ -102,7 +102,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_4
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_4_Ensure_events_that_modify_date_and_time_information_are_collected
 
 - name: "SCORED | 4_1_5 | PATCH | Ensure events that modify user/group information are collected"
   template:
@@ -118,7 +118,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_5
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_5_Ensure_events_that_modify_usergroup_information_are_collected
 
 - name: "SCORED | 4_1_6 | PATCH | Ensure events that modify the system's network environment are collected"
   template:
@@ -134,7 +134,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_6
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_6_Ensure_events_that_modify_the_systems_network_environment_are_collected
 
 - name: "SCORED | 4_1_7 | PATCH | Ensure events that modify the system's Mandatory Access Controls are collected"
   template:
@@ -150,7 +150,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_7
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_7_Ensure_events_that_modify_the_systems_Mandatory_Access_Controls_are_collected
 
 - name: "SCORED | 4_1_8 | PATCH | Ensure login and logout events are collected"
   template:
@@ -166,7 +166,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_8
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_8_Ensure_login_and_logout_events_are_collected
 
 - name: "SCORED | 4_1_9 | PATCH | Ensure session initiation information is collected"
   template:
@@ -182,7 +182,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_9
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_9_Ensure_session_initiation_information_is_collected
 
 - name: "SCORED | 4_1_10 | PATCH | Ensure discretionary access control permission modification events are collected"
   template:
@@ -198,7 +198,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_10
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_10_Ensure_discretionary_access_control_permission_modification_events_are_collected
 
 - name: "SCORED | 4_1_11 | PATCH | Ensure unsuccessful unauthorized file access attempts are collected"
   template:
@@ -214,7 +214,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_11
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_11_Ensure_unsuccessful_unauthorized_file_access_attempts_are_collected
 
 - name: "SCORED | 4_1_12 | PATCH | Ensure use of privileged commands is collected"
   shell: for i in  $(df | grep '^/dev' | awk '{ print $NF }'); do find $i -xdev -type f -perm -4000 -o -type f -perm -2000 2>/dev/null; done
@@ -227,7 +227,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_12
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_12_Ensure_use_of_privileged_commands_is_collected
 
 - name: "SCORED | 4_1_12 | PATCH | Ensure use of privileged commands is collected"
   template:
@@ -243,7 +243,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_12
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_12_Ensure_use_of_privileged_commands_is_collected
 
 - name: "SCORED | 4_1_13 | PATCH | Ensure successful file system mounts are collected"
   template:
@@ -259,7 +259,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_13
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_13_Ensure_successful_file_system_mounts_are_collected
 
 - name: "SCORED | 4_1_14 | PATCH | Ensure file deletion events by users are collected"
   template:
@@ -275,7 +275,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_14
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_14_Ensure_file_deletion_events_by_users_are_collected
 
 - name: "SCORED | 4_1_15 | PATCH | Ensure changes to system administration scope (sudoers) is collected"
   template:
@@ -291,7 +291,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_15
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_15_Ensure_changes_to_system_administration_scope_sudoers_is_collected
 
 - name: "SCORED | 4_1_16 | PATCH | Ensure system administrator actions (sudolog) are collected"
   template:
@@ -307,7 +307,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_16
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_16_Ensure_system_administrator_actions_sudolog_are_collected
 
 - name: "SCORED | 4_1_17 | PATCH | Ensure kernel module loading and unloading is collected"
   template:
@@ -323,7 +323,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_17
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_17_Ensure_kernel_module_loading_and_unloading_is_collected
 
 - name: "SCORED | 4_1_18 | PATCH | Ensure the audit configuration is immutable"
   template:
@@ -339,7 +339,7 @@
       - level2
       - auditd
       - patch
-      - rule_4_1_18
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_1_18_Ensure_the_audit_configuration_is_immutable
 
 - name: "SCORED | 4_2_3 | PATCH | Ensure rsyslog or syslog-ng is installed"
   yum:
@@ -351,7 +351,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_3_Ensure_rsyslog_or_syslog-ng_is_installed
 
 - name: "SCORED | 4_2_1_1 | PATCH | Ensure rsyslog Service is enabled"
   command: /bin/true
@@ -362,7 +362,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_1_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_1_1_Ensure_rsyslog_Service_is_enabled
       - notimplemented
 
 - name: "NOTSCORED | 4_2_1_2 | PATCH | Ensure logging is configured"
@@ -374,7 +374,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_1_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_1_2_Ensure_logging_is_configured
       - notimplemented
 
 - name: "SCORED | 4_2_1_3 | PATCH | Ensure rsyslog default file permissions configured"
@@ -388,7 +388,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_1_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_1_3_Ensure_rsyslog_default_file_permissions_configured
 
 - name: "SCORED | 4_2_1_4 | PATCH | Ensure rsyslog is configured to send logs to a remote log host"
   command: /bin/true
@@ -399,7 +399,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_1_4
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_1_4_Ensure_rsyslog_is_configured_to_send_logs_to_a_remote_log_host
       - notimplemented
 
 - name: "NOTSCORED | 4_2_1_5 | PATCH | Ensure remote rsyslog messages are only accepted on designated log hosts_"
@@ -411,7 +411,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_1_5
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_1_5_Ensure_remote_rsyslog_messages_are_only_accepted_on_designated_log_hosts_
       - notimplemented
 
 - name: "NOTSCORED | 4_2_1_5 | PATCH | Ensure remote rsyslog messages are only accepted on designated log hosts_"
@@ -423,7 +423,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_1_5
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_1_5_Ensure_remote_rsyslog_messages_are_only_accepted_on_designated_log_hosts_
       - notimplemented
 
 - name: "SCORED | 4_2_2_1 | PATCH | Ensure syslog-ng service is enabled"
@@ -435,7 +435,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_2_1
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_2_1_Ensure_syslog-ng_service_is_enabled
       - notimplemented
 
 - name: "NOTSCORED | 4_2_2_2 | PATCH | Ensure logging is configured"
@@ -447,7 +447,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_2_2
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_2_2_Ensure_logging_is_configured
       - notimplemented
 
 - name: "SCORED | 4_2_2_3 | PATCH | Ensure syslog-ng default file permissions configured"
@@ -459,7 +459,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_2_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_2_3_Ensure_syslog-ng_default_file_permissions_configured
       - notimplemented
 
 - name: "NOTSCORED | 4_2_2_4 | PATCH | Ensure syslog-ng is configured to send logs to a remote log host"
@@ -471,7 +471,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_2_4
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_2_4_Ensure_syslog-ng_is_configured_to_send_logs_to_a_remote_log_host
       - notimplemented
 
 - name: "NOTSCORED | 4_2_2_5 | PATCH | Ensure remote syslog-ng messages are only accepted on designated log hosts"
@@ -483,7 +483,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_2_5
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_2_5_Ensure_remote_syslog-ng_messages_are_only_accepted_on_designated_log_hosts
       - notimplemented
 
 - name: "SCORED | 4_2_4 | PATCH | Ensure permissions on all logfiles are configured"
@@ -496,7 +496,7 @@
       - level1
       - level2
       - patch
-      - rule_4_2_4
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_2_4_Ensure_permissions_on_all_logfiles_are_configured
 
 - name: "NOTSCORED | 4_3 | PATCH | Ensure logrotate is configured"
   find:
@@ -506,7 +506,7 @@
       - level1
       - level2
       - patch
-      - rule_4_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_3_Ensure_logrotate_is_configured
 
 - name: "NOTSCORED | 4_3 | PATCH | Ensure logrotate is configured"
   replace:
@@ -520,5 +520,5 @@
       - level1
       - level2
       - patch
-      - rule_4_3
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_4_3_Ensure_logrotate_is_configured
 
