@@ -2,7 +2,7 @@ RHEL 7 CIS STIG
 ================
 
 
-[![Ansible Role](https://img.shields.io/ansible/role/16089.svg)](https://galaxy.ansible.com/vshivnani_cavirin/cavirinrhel7cis)
+[![Ansible Role]](https://galaxy.ansible.com/vshivnani_cavirin/cavirinrhel7cis)
 
 Configure RHEL/Centos 7 machine to be [CIS](https://www.cisecurity.org/cis-benchmarks/) compliant. Level 1 and 2 findings will be corrected by default.
 
