@@ -669,7 +669,7 @@
           - level1
           - level2
           - patch
-      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_3_Ensure_authentication_required_for_single_user_mode
+          - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_3_Ensure_authentication_required_for_single_user_mode
       - name: "NOTSCORED | 1_4_3 | PATCH | Ensure authentication required for single user mode - Rescue"
         lineinfile:
           dest: /usr/lib/systemd/system/rescue_service
@@ -682,7 +682,7 @@
           - level1
           - level2
           - patch
-      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_3_Ensure_authentication_required_for_single_user_mode
+          - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_1_4_3_Ensure_authentication_required_for_single_user_mode
 
 - name: "SCORED | 1_5_1 | PATCH | Ensure core dumps are restricted"
   lineinfile:

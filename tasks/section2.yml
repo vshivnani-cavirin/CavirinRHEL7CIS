@@ -196,7 +196,7 @@
       enabled: no
   when:
       - xinetd_service_status_stdout == "loaded" and not rhel7cis_xinetd_required
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_1_7_Ensure_talk_server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_1_7_Ensure_talk_server_is_not_enabled
   tags:
       - level1
       - patch
@@ -233,7 +233,7 @@
       enabled: no
   when:
       - rhel7cis_time_synchronization == "chrony" and ntpd_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_1_Ensure_time_synchronization_is_in_use
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_1_Ensure_time_synchronization_is_in_use
   tags:
       - level1
       - patch
@@ -247,7 +247,7 @@
   ignore_errors: yes
   when:
       - rhel7cis_time_synchronization == "ntp" and chronyd_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_1_Ensure_time_synchronization_is_in_use
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_1_Ensure_time_synchronization_is_in_use
   tags:
       - level1
       - patch
@@ -262,7 +262,7 @@
       mode: 0644
   when:
       - rhel7cis_time_synchronization == "ntp"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_2_Ensure_ntp_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_2_Ensure_ntp_is_configured
   tags:
       - level1
       - patch
@@ -275,7 +275,7 @@
       line: "OPTIONS=\"-u ntp:ntp\""
   when:
       - rhel7cis_time_synchronization == "ntp"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_2_Ensure_ntp_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_2_Ensure_ntp_is_configured
   tags:
       - level1
       - patch
@@ -288,7 +288,7 @@
       line: "ExecStart=/usr/sbin/ntpd -u ntp:ntp $OPTIONS"
   when:
       - rhel7cis_time_synchronization == "ntp"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_2_Ensure_ntp_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_2_Ensure_ntp_is_configured
   tags:
       - level1
       - patch
@@ -303,7 +303,7 @@
       mode: 0644
   when:
       - rhel7cis_time_synchronization == "chrony"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_3_Ensure_chrony_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_3_Ensure_chrony_is_configured
   tags:
       - level1
       - patch
@@ -318,7 +318,7 @@
       create: yes
   when:
       - rhel7cis_time_synchronization == "chrony"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_3_Ensure_chrony_is_configured
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_1_3_Ensure_chrony_is_configured
   tags:
       - level1
       - patch
@@ -333,7 +333,7 @@
       - "xorg-x11*"
   when:
       - not rhel7cis_xwindows_required
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_2_Ensure_X_Window_System_is_not_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_2_Ensure_X_Window_System_is_not_installed
   tags:
       - level1
       - scored
@@ -348,7 +348,7 @@
       enabled: no
   when:
       - rhel7cis_avahi_server == false and avahi_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_3_Ensure_Avahi_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_3_Ensure_Avahi_Server_is_not_enabled
   tags:
       - level1
       - scored
@@ -364,7 +364,7 @@
       enabled: no
   when:
       - rhel7cis_cups_server == false and cups_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_4_Ensure_CUPS_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_4_Ensure_CUPS_is_not_enabled
   tags:
       - level1
       - scored
@@ -380,7 +380,7 @@
       enabled: no
   when:
       - rhel7cis_dhcp_server == false and dhcpd_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_5_Ensure_DHCP_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_5_Ensure_DHCP_Server_is_not_enabled
   tags:
       - level1
       - scored
@@ -396,7 +396,7 @@
       enabled: no
   when:
       - rhel7cis_ldap_server == false and slapd_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_6_Ensure_LDAP_server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_6_Ensure_LDAP_server_is_not_enabled
   tags:
       - level1
       - scored
@@ -412,7 +412,7 @@
       enabled: no
   when:
       - rhel7cis_nfs_rpc_server == false and nfs_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_7_Ensure_NFS_and_RPC_are_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_7_Ensure_NFS_and_RPC_are_not_enabled
   tags:
       - level1
       - scored
@@ -429,7 +429,7 @@
       enabled: no
   when:
       - rhel7cis_nfs_rpc_server == false and rpcbind_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_7_Ensure_NFS_and_RPC_are_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_7_Ensure_NFS_and_RPC_are_not_enabled
   tags:
       - level1
       - scored
@@ -446,7 +446,7 @@
       enabled: no
   when:
       - rhel7cis_named_server == false and named_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_8_Ensure_DNS_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_8_Ensure_DNS_Server_is_not_enabled
   tags:
       - level1
       - patch
@@ -459,7 +459,7 @@
       enabled: no
   when:
       - rhel7cis_vsftpd_server == false and vsftpd_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_9_Ensure_FTP_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_9_Ensure_FTP_Server_is_not_enabled
   tags:
       - level1
       - patch
@@ -472,7 +472,7 @@
       enabled: no
   when:
       - rhel7cis_httpd_server == false and httpd_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_10_Ensure_HTTP_server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_10_Ensure_HTTP_server_is_not_enabled
   tags:
       - level1
       - patch
@@ -485,7 +485,7 @@
       enabled: no
   when:
       - rhel7cis_dovecot_server == false and dovecot_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_11_Ensure_IMAP_and_POP3_server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_11_Ensure_IMAP_and_POP3_server_is_not_enabled
   tags:
       - level1
       - patch
@@ -498,7 +498,7 @@
       enabled: no
   when:
       - rhel7cis_smb_server == false and smb_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_12_Ensure_Samba_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_12_Ensure_Samba_is_not_enabled
   tags:
       - level1
       - patch
@@ -511,7 +511,7 @@
       enabled: no
   when:
       - rhel7cis_squid_server == false and squid_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_13_Ensure_HTTP_Proxy_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_13_Ensure_HTTP_Proxy_Server_is_not_enabled
   tags:
       - level1
       - patch
@@ -524,7 +524,7 @@
       enabled: no
   when:
       - rhel7cis_snmp_server == false and snmpd_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_14_Ensure_SNMP_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_14_Ensure_SNMP_Server_is_not_enabled
   tags:
       - level1
       - patch
@@ -537,7 +537,7 @@
       line: "inet_interfaces = localhost"
   when:
       - rhel7cis_is_mail_server == false and postfix_installed_rc == 0
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_15_Ensure_mail_transfer_agent_is_configured_for_local-only_mode
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_15_Ensure_mail_transfer_agent_is_configured_for_local-only_mode
   tags:
       - level1
       - patch
@@ -550,7 +550,7 @@
       enabled: no
   when:
       - rhel7cis_nis_server == false and ypserv_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_16_Ensure_rsync_service_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_16_Ensure_rsync_service_is_not_enabled
   tags:
       - level1
       - patch
@@ -563,7 +563,7 @@
       enabled: no
   when:
       - rhel7cis_rsh_server == false and rsh_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_17_Ensure_NIS_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_17_Ensure_NIS_Server_is_not_enabled
   tags:
       - level1
       - patch
@@ -576,7 +576,7 @@
       enabled: no
   when:
       - rhel7cis_rsh_server == false and rlogin_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_17_Ensure_NIS_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_17_Ensure_NIS_Server_is_not_enabled
   tags:
       - level1
       - patch
@@ -589,7 +589,7 @@
       enabled: no
   when:
       - rhel7cis_rsh_server == false and rexec_service_status_stdout == "loaded"
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_17_Ensure_NIS_Server_is_not_enabled
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_2_17_Ensure_NIS_Server_is_not_enabled
   tags:
       - level1
       - patch
@@ -656,7 +656,7 @@
       state: absent
   when:
       - rhel7cis_ypbind_required == false
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_1_Ensure_NIS_Client_is_not_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_1_Ensure_NIS_Client_is_not_installed
   tags:
       - level1
       - patch
@@ -668,7 +668,7 @@
       state: absent
   when:
       - rhel7cis_rsh_required == false
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_2_Ensure_rsh_client_is_not_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_2_Ensure_rsh_client_is_not_installed
   tags:
       - level1
       - patch
@@ -680,7 +680,7 @@
       state: absent
   when:
       - rhel7cis_talk_required == false
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_3_Ensure_talk_client_is_not_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_3_Ensure_talk_client_is_not_installed
   tags:
       - level1
       - patch
@@ -692,7 +692,7 @@
       state: absent
   when:
       - rhel7cis_telnet_required == false
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_4_Ensure_telnet_client_is_not_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_4_Ensure_telnet_client_is_not_installed
   tags:
       - level1
       - patch
@@ -704,7 +704,7 @@
       state: absent
   when:
       - rhel7cis_openldap_clients_required == false
-        - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_5_Ensure_LDAP_client_is_not_installed
+      - root_CISPP_xccdf_org_cisecurity_benchmarks_rule_2_3_5_Ensure_LDAP_client_is_not_installed
   tags:
       - level1
       - patch
